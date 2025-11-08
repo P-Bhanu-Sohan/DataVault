@@ -36,20 +36,7 @@ services:
       - REDIS_URL=redis://redis:6379
       - ENCRYPTION_KEY=01234567890123456789012345678901
 
-  data_processor:
-    build:
-      context: .
-      dockerfile: ./backend/Dockerfile
-    restart: always
-    depends_on:
-      - postgres
-      - redis
-      - backend
-    environment:
-      - DATABASE_URL=postgresql://user:password@postgres/datavault
-      - REDIS_URL=redis://redis:6379
-      - ENCRYPTION_KEY=01234567890123456789012345678901
-    command: ["python", "data_processor.py"]
+  
 
 volumes:
   postgres_data:
