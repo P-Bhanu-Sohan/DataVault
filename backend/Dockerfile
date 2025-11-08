@@ -24,5 +24,6 @@ RUN python -m grpc_tools.protoc -I/app/proto --python_out=/app/backend/generated
 COPY backend /app/backend
 COPY simulations /app/simulations
 COPY test.py /app/test.py
+COPY UI /app/UI
 
 CMD ["python", "backend/main.py"]

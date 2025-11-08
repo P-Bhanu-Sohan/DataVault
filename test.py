@@ -2,32 +2,27 @@ import json
 import requests
 import time
 import asyncio
+import grpc
+import os
+from dotenv import load_dotenv
+import asyncpg
+import chromadb
+from sentence_transformers import SentenceTransformer
 
-from simulations.ingest import ingest_data
-from simulations.embed import embed_data
+from backend.generated import datavault_pb2, datavault_pb2_grpc
+from backend.crypto_utils import decrypt_json
 
-def query_rag_api(query: str):
+async def setup_test_data():
     """
-    Sends a query to the RAG API and prints the response.
+    Ingests and embeds the first 5 records of each data category.
     """
-    print(f"\n--- Querying RAG API with: '{query}' ---")
-    api_url = "http://localhost:8000/rag_query"
-    payload = {"query": query}
-    headers = {"Content-Type": "application/json"}
+    load_dotenv()
+    print("--- Starting Test Data Setup ---")
 
-    try:
-        response = requests.post(api_url, data=json.dumps(payload), headers=headers)
-        response.raise_for_status()
-        print("RAG API Response:")
-        print(response.json().get("response"))
-    except requests.exceptions.RequestException as e:
-        print(f"An error occurred while querying the RAG API: {e}")
-
-async def run_e2e_test():
-    """
-    Runs an end-to-end test of the DataVault pipeline.
-    """
-    print("--- Starting End-to-End Test ---")
+    # --- Configuration ---
+    DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost:5432/datavault")
+    SECRET_KEY = os.getenv("ENCRYPTION_KEY", "12345678901234567890123456789012").encode('utf-8')
+    CHROMA_HOST = os.getenv("CHROMA_HOST", "localhost")
     
     # Wait for services to be ready
     print("Waiting for services to start... (15s)")
@@ -43,21 +38,41 @@ async def run_e2e_test():
 
     # 2. Ingest data via gRPC
     print("\n--- Step 2: Ingesting data via gRPC ---")
-    ingest_data(healthcare_samples, 'healthcare')
-    ingest_data(finance_samples, 'finance')
+    ingested_ids = []
+    with grpc.insecure_channel('backend:50051') as channel:
+        stub = datavault_pb2_grpc.DataVaultServiceStub(channel)
+        for record in healthcare_samples:
+            response = stub.Ingest(datavault_pb2.DataRecord(data_type='healthcare', data=json.dumps(record).encode()))
+            print(f"Healthcare record ingested with ID: {response.id}, Status: {response.status}")
+            if response.status == "OK":
+                ingested_ids.append(response.id)
+        for record in finance_samples:
+            response = stub.Ingest(datavault_pb2.DataRecord(data_type='finance', data=json.dumps(record).encode()))
+            print(f"Finance record ingested with ID: {response.id}, Status: {response.status}")
+            if response.status == "OK":
+                ingested_ids.append(response.id)
     print("Ingestion complete.")
 
     # 3. Embed data from PostgreSQL into ChromaDB
     print("\n--- Step 3: Embedding data into ChromaDB ---")
-    await embed_data()
+    db_pool = await asyncpg.create_pool(DATABASE_URL)
+    chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=8000)
+    collection = chroma_client.get_or_create_collection(name="datavault_anonymized")
+    embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+
+    async with db_pool.acquire() as conn:
+        for record_id in ingested_ids:
+            row = await conn.fetchrow('SELECT data FROM encrypted_blobs WHERE id = $1', record_id)
+            if row:
+                encrypted_data_b64 = row['data'].decode('utf-8')
+                decrypted_data = decrypt_json(encrypted_data_b64, SECRET_KEY)
+                document = json.dumps(decrypted_data)
+                embedding = embedding_model.encode(document).tolist()
+                collection.add(embeddings=[embedding], documents=[document], ids=[record_id])
+                print(f"Successfully embedded record {record_id} into ChromaDB.")
+    await db_pool.close()
     print("Embedding complete.")
-
-    # 4. Query the RAG API
-    print("\n--- Step 4: Querying the RAG API ---")
-    query_rag_api("What are the risks of high-risk investments?")
-    query_rag_api("What are common treatments for hypertension?")
-
-    print("\n--- End-to-End Test Complete ---")
+    print("\n--- Test Data Setup Complete ---")
 
 if __name__ == "__main__":
-    asyncio.run(run_e2e_test())
+    asyncio.run(setup_test_data())

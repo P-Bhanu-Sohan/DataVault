@@ -1,3 +1,15 @@
+import importlib.metadata
+import sys
+
+# Patch for importlib.metadata.packages_distributions
+if sys.version_info < (3, 10):
+    def packages_distributions():
+        return {
+            dist.metadata["name"]: [dist]
+            for dist in importlib.metadata.distributions()
+        }
+    importlib.metadata.packages_distributions = packages_distributions
+
 import asyncio
 import grpc
 from concurrent import futures
@@ -14,6 +26,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import uvicorn
 from sentence_transformers import SentenceTransformer
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from anonymizer import redact_names, anonymize_age
 from crypto_utils import encrypt_json, decrypt_json
@@ -43,6 +57,9 @@ generative_model = None
 
 # --- FastAPI Application ---
 app = FastAPI()
+
+# Mount static files
+app.mount("/resources", StaticFiles(directory="/app/UI/Resources"), name="resources")
 
 @app.on_event("startup")
 async def startup_event():
@@ -124,6 +141,7 @@ class RAGResponse(BaseModel):
 @app.post("/rag_query", response_model=RAGResponse)
 async def rag_query(query: RAGQuery):
     try:
+        logging.info(f"Received RAG query: {query.query}")
         chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=8000)
         collection = chroma_client.get_collection(name="datavault_anonymized")
         
@@ -132,20 +150,30 @@ async def rag_query(query: RAGQuery):
         results = collection.query(query_embeddings=[query_embedding], n_results=5)
         documents = results.get('documents', [])
         if not documents or not documents[0]:
+            logging.warning("No relevant documents found in ChromaDB.")
             raise HTTPException(status_code=404, detail="No relevant documents found.")
         
         context = "\n".join(documents[0])
+        logging.info(f"Context for generative model:\n{context}")
+        
         prompt = f"Based on the following context, please answer the user's query.\n\nContext:\n{context}\n\nUser Query:\n{query.query}"
         
         response = await generative_model.generate_content_async(prompt)
-        return RAGResponse(response=response.text)
+        
+        response_text = response.text
+        logging.info(f"Response from generative model: {response_text}")
+        
+        rag_response = RAGResponse(response=response_text)
+        logging.info(f"Final RAG response object: {rag_response.json()}")
+        
+        return rag_response
     except Exception as e:
         logging.error(f"Error during RAG query: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/")
-def read_root():
-    return {"message": "DataVault RAG API is running"}
+async def read_root():
+    return FileResponse('/app/UI/index.html')
 
 # --- Server Startup ---
 async def serve_grpc():

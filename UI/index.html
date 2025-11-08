@@ -585,6 +585,7 @@
             `;
             chatMessages.appendChild(message);
             chatMessages.scrollTop = chatMessages.scrollHeight;
+            return message; // Return the created message element
         }
 
         function handleUserQuery() {
@@ -593,11 +594,43 @@
 
             addChatMessage(query, null, true);
             chatInput.value = '';
+            chatInput.disabled = true;
+            sendButton.disabled = true;
+            sendButton.textContent = '...';
 
-            setTimeout(() => {
-                const response = ragResponses[Math.floor(Math.random() * ragResponses.length)];
-                addChatMessage(response, 'Query processed in 240ms');
-            }, 800);
+            // Add a temporary "thinking" message
+            const thinkingMessage = addChatMessage('Thinking...', null, false);
+
+            fetch('/rag_query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query: query }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Remove the "thinking" message
+                thinkingMessage.remove();
+                addChatMessage(data.response, 'Query processed', false);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Remove the "thinking" message
+                thinkingMessage.remove();
+                addChatMessage('Sorry, something went wrong. Please try again.', null, false);
+            })
+            .finally(() => {
+                chatInput.disabled = false;
+                sendButton.disabled = false;
+                sendButton.textContent = 'SEND';
+                chatInput.focus();
+            });
         }
 
         sendButton.addEventListener('click', handleUserQuery);
