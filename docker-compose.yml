@@ -1,0 +1,56 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14
+    restart: always
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=datavault
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./backend/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    restart: always
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    restart: always
+    ports:
+      - '8000:8000'
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DATABASE_URL=postgresql://user:password@postgres/datavault
+      - REDIS_URL=redis://redis:6379
+      - ENCRYPTION_KEY=01234567890123456789012345678901
+
+  data_processor:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    restart: always
+    depends_on:
+      - postgres
+      - redis
+      - backend
+    environment:
+      - DATABASE_URL=postgresql://user:password@postgres/datavault
+      - REDIS_URL=redis://redis:6379
+      - ENCRYPTION_KEY=01234567890123456789012345678901
+    command: ["python", "data_processor.py"]
+
+volumes:
+  postgres_data:
+  redis_data:

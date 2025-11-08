@@ -1,0 +1,7 @@
+CREATE TABLE encrypted_blobs (
+    id UUID PRIMARY KEY,
+    data BYTEA NOT NULL,
+    data_type VARCHAR(255) NOT NULL,
+    data_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);

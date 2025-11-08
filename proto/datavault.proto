@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package datavault;
+
+message DataRecord {
+    string data_type = 1; // "healthcare" or "finance"
+    bytes data = 2; // JSON string of the record
+}
+
+message IngestResponse {
+    string id = 1;
+    string status = 2;
+}
+
+service DataVaultService {
+    rpc Ingest(DataRecord) returns (IngestResponse);
+    rpc Retrieve(IngestResponse) returns (DataRecord);
+}

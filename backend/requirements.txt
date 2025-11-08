@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+psycopg2-binary
+redis
+grpcio
+protobuf
+fastapi-health
+cryptography
+python-dotenv
+requests
+numpy
+pandas
+pyarrow
+snowflake-connector-python
+vultr-python
+gemini-api
+asyncpg

@@ -1,0 +1,4502 @@
+[
+    {
+        "account_hash": "20000",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 535.66,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-04T03:49:14Z"
+    },
+    {
+        "account_hash": "20001",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 744.34,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-27T09:46:28Z"
+    },
+    {
+        "account_hash": "20002",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 55.19,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-13T04:33:37Z"
+    },
+    {
+        "account_hash": "20003",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 488.11,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-30T19:56:31Z"
+    },
+    {
+        "account_hash": "20004",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 665.32,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-01T01:40:09Z"
+    },
+    {
+        "account_hash": "20005",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 631.9,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-16T02:01:46Z"
+    },
+    {
+        "account_hash": "20006",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 10.4,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-08T11:44:51Z"
+    },
+    {
+        "account_hash": "20007",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 270.82,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-15T16:16:53Z"
+    },
+    {
+        "account_hash": "20008",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 643.94,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-14T12:31:03Z"
+    },
+    {
+        "account_hash": "20009",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 404.09,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-07T15:50:59Z"
+    },
+    {
+        "account_hash": "20010",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 933.49,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-06T03:38:52Z"
+    },
+    {
+        "account_hash": "20011",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 921.84,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-04-23T16:34:18Z"
+    },
+    {
+        "account_hash": "20012",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 243.16,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-19T07:36:56Z"
+    },
+    {
+        "account_hash": "20013",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 617.64,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-14T09:27:42Z"
+    },
+    {
+        "account_hash": "20014",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 18.96,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-16T08:17:16Z"
+    },
+    {
+        "account_hash": "20015",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 310.84,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-10T00:06:51Z"
+    },
+    {
+        "account_hash": "20016",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 21.25,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-13T07:34:58Z"
+    },
+    {
+        "account_hash": "20017",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 532.5,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-25T11:02:15Z"
+    },
+    {
+        "account_hash": "20018",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 644.91,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-07-16T10:02:21Z"
+    },
+    {
+        "account_hash": "20019",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 289.35,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-20T22:20:37Z"
+    },
+    {
+        "account_hash": "20020",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 945.53,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-20T15:03:17Z"
+    },
+    {
+        "account_hash": "20021",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 286.39,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-09T04:55:45Z"
+    },
+    {
+        "account_hash": "20022",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 340.9,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-08-10T12:27:22Z"
+    },
+    {
+        "account_hash": "20023",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 943.59,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-12T23:09:16Z"
+    },
+    {
+        "account_hash": "20024",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 617.44,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-07T17:07:12Z"
+    },
+    {
+        "account_hash": "20025",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 142.67,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-06T18:36:45Z"
+    },
+    {
+        "account_hash": "20026",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 218.75,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-29T17:32:49Z"
+    },
+    {
+        "account_hash": "20027",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 481.89,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-07-08T19:06:18Z"
+    },
+    {
+        "account_hash": "20028",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 810.79,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-01T09:53:55Z"
+    },
+    {
+        "account_hash": "20029",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 924.24,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-27T05:30:57Z"
+    },
+    {
+        "account_hash": "20030",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 969.48,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-03T00:24:18Z"
+    },
+    {
+        "account_hash": "20031",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 593.24,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-15T16:07:34Z"
+    },
+    {
+        "account_hash": "20032",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 750.78,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-19T10:37:57Z"
+    },
+    {
+        "account_hash": "20033",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 347.88,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-26T11:15:33Z"
+    },
+    {
+        "account_hash": "20034",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 603.07,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-11T20:55:59Z"
+    },
+    {
+        "account_hash": "20035",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 514.42,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-10-15T15:06:22Z"
+    },
+    {
+        "account_hash": "20036",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 64.24,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-17T00:34:10Z"
+    },
+    {
+        "account_hash": "20037",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 977.46,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-28T16:20:54Z"
+    },
+    {
+        "account_hash": "20038",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 334.2,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-21T12:10:24Z"
+    },
+    {
+        "account_hash": "20039",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 328.98,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-03T18:10:47Z"
+    },
+    {
+        "account_hash": "20040",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 69.45,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-05T07:16:20Z"
+    },
+    {
+        "account_hash": "20041",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 12.86,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-29T13:46:29Z"
+    },
+    {
+        "account_hash": "20042",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 997.27,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-01T18:56:26Z"
+    },
+    {
+        "account_hash": "20043",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 300.41,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-13T10:11:41Z"
+    },
+    {
+        "account_hash": "20044",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 704.96,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-07T08:38:40Z"
+    },
+    {
+        "account_hash": "20045",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 778.98,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-01T01:39:45Z"
+    },
+    {
+        "account_hash": "20046",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 372.31,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-24T10:37:38Z"
+    },
+    {
+        "account_hash": "20047",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 96.52,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-08-09T19:51:41Z"
+    },
+    {
+        "account_hash": "20048",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 118.83,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-15T05:21:56Z"
+    },
+    {
+        "account_hash": "20049",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 40.09,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-10-28T00:36:11Z"
+    },
+    {
+        "account_hash": "20050",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 906.61,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-25T17:32:08Z"
+    },
+    {
+        "account_hash": "20051",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 987.9,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-03-29T02:05:37Z"
+    },
+    {
+        "account_hash": "20052",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 195.64,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-11T02:55:15Z"
+    },
+    {
+        "account_hash": "20053",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 631.82,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-14T20:01:42Z"
+    },
+    {
+        "account_hash": "20054",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 354.52,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-12T14:13:15Z"
+    },
+    {
+        "account_hash": "20055",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 263.5,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-19T14:35:45Z"
+    },
+    {
+        "account_hash": "20056",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 574.63,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-23T19:08:02Z"
+    },
+    {
+        "account_hash": "20057",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 521.36,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-26T03:28:55Z"
+    },
+    {
+        "account_hash": "20058",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 763.77,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-09-19T04:14:08Z"
+    },
+    {
+        "account_hash": "20059",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 161.65,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-11T05:58:24Z"
+    },
+    {
+        "account_hash": "20060",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 660.8,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-12-26T14:57:06Z"
+    },
+    {
+        "account_hash": "20061",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 427.3,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-11T04:48:56Z"
+    },
+    {
+        "account_hash": "20062",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 700.79,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-25T02:15:05Z"
+    },
+    {
+        "account_hash": "20063",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 228.5,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-31T04:56:23Z"
+    },
+    {
+        "account_hash": "20064",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 980.97,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-29T01:29:46Z"
+    },
+    {
+        "account_hash": "20065",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 861.65,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-23T21:39:19Z"
+    },
+    {
+        "account_hash": "20066",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 404.36,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-11T13:13:16Z"
+    },
+    {
+        "account_hash": "20067",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 238.61,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-18T22:02:56Z"
+    },
+    {
+        "account_hash": "20068",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 462.32,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-29T01:42:58Z"
+    },
+    {
+        "account_hash": "20069",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 996.23,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-10T10:53:53Z"
+    },
+    {
+        "account_hash": "20070",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 204.61,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-09-12T08:09:21Z"
+    },
+    {
+        "account_hash": "20071",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 619.71,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-05T06:28:13Z"
+    },
+    {
+        "account_hash": "20072",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 719.33,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-07T23:17:47Z"
+    },
+    {
+        "account_hash": "20073",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 622.36,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-27T15:07:48Z"
+    },
+    {
+        "account_hash": "20074",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 148.1,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-21T15:23:51Z"
+    },
+    {
+        "account_hash": "20075",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 117.61,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-26T20:14:42Z"
+    },
+    {
+        "account_hash": "20076",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 952.88,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-16T07:15:08Z"
+    },
+    {
+        "account_hash": "20077",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 326.34,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-11T13:55:12Z"
+    },
+    {
+        "account_hash": "20078",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 208.18,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-13T00:00:52Z"
+    },
+    {
+        "account_hash": "20079",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 319.73,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-11T02:05:41Z"
+    },
+    {
+        "account_hash": "20080",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 185.71,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-06T11:16:39Z"
+    },
+    {
+        "account_hash": "20081",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 967.17,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-04-17T15:21:01Z"
+    },
+    {
+        "account_hash": "20082",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 891.17,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-09T01:29:28Z"
+    },
+    {
+        "account_hash": "20083",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 372.01,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-27T14:58:37Z"
+    },
+    {
+        "account_hash": "20084",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 119.96,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-18T06:04:24Z"
+    },
+    {
+        "account_hash": "20085",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 517.36,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-02T07:40:49Z"
+    },
+    {
+        "account_hash": "20086",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 58.26,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-06T14:22:56Z"
+    },
+    {
+        "account_hash": "20087",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 647.73,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-05T22:32:11Z"
+    },
+    {
+        "account_hash": "20088",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 442.7,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-07T16:20:39Z"
+    },
+    {
+        "account_hash": "20089",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 583.6,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-19T23:30:29Z"
+    },
+    {
+        "account_hash": "20090",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 246.45,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-10-26T20:58:15Z"
+    },
+    {
+        "account_hash": "20091",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 991.14,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-29T11:17:03Z"
+    },
+    {
+        "account_hash": "20092",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 382.04,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-20T09:29:56Z"
+    },
+    {
+        "account_hash": "20093",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 800.66,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-10T10:40:08Z"
+    },
+    {
+        "account_hash": "20094",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 674.61,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-28T19:44:35Z"
+    },
+    {
+        "account_hash": "20095",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 579.17,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-12-30T00:28:00Z"
+    },
+    {
+        "account_hash": "20096",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 52.83,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-09-19T13:23:32Z"
+    },
+    {
+        "account_hash": "20097",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 251.96,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-05-28T00:58:26Z"
+    },
+    {
+        "account_hash": "20098",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 636.55,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-03T07:12:20Z"
+    },
+    {
+        "account_hash": "20099",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 536.33,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-22T19:04:24Z"
+    },
+    {
+        "account_hash": "20100",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 616.53,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-14T14:57:34Z"
+    },
+    {
+        "account_hash": "20101",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 25.32,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-23T00:50:57Z"
+    },
+    {
+        "account_hash": "20102",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 843.71,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-04-15T16:06:25Z"
+    },
+    {
+        "account_hash": "20103",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 460.01,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-08-21T10:07:27Z"
+    },
+    {
+        "account_hash": "20104",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 209.57,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-30T05:58:59Z"
+    },
+    {
+        "account_hash": "20105",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 809.73,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-25T02:13:11Z"
+    },
+    {
+        "account_hash": "20106",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 647.57,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-12-11T17:24:08Z"
+    },
+    {
+        "account_hash": "20107",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 872.75,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-08T12:27:37Z"
+    },
+    {
+        "account_hash": "20108",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 105.43,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-06-04T00:20:19Z"
+    },
+    {
+        "account_hash": "20109",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 41.2,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-09-28T07:42:47Z"
+    },
+    {
+        "account_hash": "20110",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 936.12,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-08-20T19:13:16Z"
+    },
+    {
+        "account_hash": "20111",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 343.69,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-05-22T20:59:43Z"
+    },
+    {
+        "account_hash": "20112",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 192.75,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-15T03:58:56Z"
+    },
+    {
+        "account_hash": "20113",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 377.61,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-20T16:31:58Z"
+    },
+    {
+        "account_hash": "20114",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 714.66,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-07T03:32:42Z"
+    },
+    {
+        "account_hash": "20115",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 887.17,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-24T06:39:44Z"
+    },
+    {
+        "account_hash": "20116",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 197.14,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-29T02:49:40Z"
+    },
+    {
+        "account_hash": "20117",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 597.59,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-06-04T07:41:54Z"
+    },
+    {
+        "account_hash": "20118",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 526.72,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-05-08T18:42:13Z"
+    },
+    {
+        "account_hash": "20119",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 381.98,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-21T01:12:45Z"
+    },
+    {
+        "account_hash": "20120",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 267.79,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-19T05:54:58Z"
+    },
+    {
+        "account_hash": "20121",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 813.96,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-05T00:55:53Z"
+    },
+    {
+        "account_hash": "20122",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 895.51,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-21T08:40:45Z"
+    },
+    {
+        "account_hash": "20123",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 253.0,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-07-22T06:42:39Z"
+    },
+    {
+        "account_hash": "20124",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 299.88,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-25T12:44:04Z"
+    },
+    {
+        "account_hash": "20125",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 134.05,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-02T10:35:26Z"
+    },
+    {
+        "account_hash": "20126",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 650.18,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-24T06:34:24Z"
+    },
+    {
+        "account_hash": "20127",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 193.03,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-29T20:08:11Z"
+    },
+    {
+        "account_hash": "20128",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 390.31,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-21T19:52:20Z"
+    },
+    {
+        "account_hash": "20129",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 768.02,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-05-14T01:57:14Z"
+    },
+    {
+        "account_hash": "20130",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 379.52,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-10T18:00:56Z"
+    },
+    {
+        "account_hash": "20131",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 675.19,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-01T07:35:34Z"
+    },
+    {
+        "account_hash": "20132",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 649.05,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-10-19T02:45:14Z"
+    },
+    {
+        "account_hash": "20133",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 815.51,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-27T08:31:07Z"
+    },
+    {
+        "account_hash": "20134",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 987.76,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-17T04:55:19Z"
+    },
+    {
+        "account_hash": "20135",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 73.31,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-11T09:50:55Z"
+    },
+    {
+        "account_hash": "20136",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 75.17,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-04T23:59:16Z"
+    },
+    {
+        "account_hash": "20137",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 710.64,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-08-24T07:26:03Z"
+    },
+    {
+        "account_hash": "20138",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 75.05,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-04-26T03:56:16Z"
+    },
+    {
+        "account_hash": "20139",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 797.25,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-21T09:50:22Z"
+    },
+    {
+        "account_hash": "20140",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 252.79,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-03T17:22:15Z"
+    },
+    {
+        "account_hash": "20141",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 556.64,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-09T23:57:55Z"
+    },
+    {
+        "account_hash": "20142",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 122.02,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-17T05:02:02Z"
+    },
+    {
+        "account_hash": "20143",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 742.85,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-28T12:12:16Z"
+    },
+    {
+        "account_hash": "20144",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 917.47,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-06-14T00:02:50Z"
+    },
+    {
+        "account_hash": "20145",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 952.7,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-26T18:00:00Z"
+    },
+    {
+        "account_hash": "20146",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 680.29,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-09T23:21:15Z"
+    },
+    {
+        "account_hash": "20147",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 125.85,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-05T19:13:07Z"
+    },
+    {
+        "account_hash": "20148",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 992.35,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-04-08T12:29:06Z"
+    },
+    {
+        "account_hash": "20149",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 267.44,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-01T10:01:15Z"
+    },
+    {
+        "account_hash": "20150",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 308.17,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-05-30T23:04:47Z"
+    },
+    {
+        "account_hash": "20151",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 292.79,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-30T10:13:28Z"
+    },
+    {
+        "account_hash": "20152",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 625.48,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-10-13T12:48:00Z"
+    },
+    {
+        "account_hash": "20153",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 61.51,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-30T19:12:09Z"
+    },
+    {
+        "account_hash": "20154",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 485.03,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-12T09:01:53Z"
+    },
+    {
+        "account_hash": "20155",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 681.38,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-07-08T18:27:08Z"
+    },
+    {
+        "account_hash": "20156",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 86.05,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-25T04:21:13Z"
+    },
+    {
+        "account_hash": "20157",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 847.5,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-29T11:20:06Z"
+    },
+    {
+        "account_hash": "20158",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 614.49,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-22T12:37:56Z"
+    },
+    {
+        "account_hash": "20159",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 998.7,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-05-04T20:45:40Z"
+    },
+    {
+        "account_hash": "20160",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 36.82,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-31T13:19:32Z"
+    },
+    {
+        "account_hash": "20161",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 874.91,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-17T23:10:17Z"
+    },
+    {
+        "account_hash": "20162",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 157.64,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-07-07T16:46:39Z"
+    },
+    {
+        "account_hash": "20163",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 969.72,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-17T01:38:00Z"
+    },
+    {
+        "account_hash": "20164",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 770.06,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-30T23:59:21Z"
+    },
+    {
+        "account_hash": "20165",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 629.57,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-06T06:54:52Z"
+    },
+    {
+        "account_hash": "20166",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 892.35,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-12T14:18:20Z"
+    },
+    {
+        "account_hash": "20167",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 193.99,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-30T20:14:53Z"
+    },
+    {
+        "account_hash": "20168",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 741.75,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-10T14:09:53Z"
+    },
+    {
+        "account_hash": "20169",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 534.77,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-30T14:49:22Z"
+    },
+    {
+        "account_hash": "20170",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 211.19,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-14T18:07:28Z"
+    },
+    {
+        "account_hash": "20171",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 636.22,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-17T14:47:40Z"
+    },
+    {
+        "account_hash": "20172",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 379.47,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-07T11:34:27Z"
+    },
+    {
+        "account_hash": "20173",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 848.04,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-12-25T23:50:26Z"
+    },
+    {
+        "account_hash": "20174",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 163.55,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-15T10:12:39Z"
+    },
+    {
+        "account_hash": "20175",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 882.23,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-05-20T01:51:26Z"
+    },
+    {
+        "account_hash": "20176",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 505.41,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-22T20:04:01Z"
+    },
+    {
+        "account_hash": "20177",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 55.95,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-25T14:47:16Z"
+    },
+    {
+        "account_hash": "20178",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 619.96,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-04T10:05:12Z"
+    },
+    {
+        "account_hash": "20179",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 629.24,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-05T17:50:09Z"
+    },
+    {
+        "account_hash": "20180",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 369.69,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-26T03:45:22Z"
+    },
+    {
+        "account_hash": "20181",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 814.56,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-28T07:42:31Z"
+    },
+    {
+        "account_hash": "20182",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 737.33,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-14T12:49:27Z"
+    },
+    {
+        "account_hash": "20183",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 523.52,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-11T21:55:48Z"
+    },
+    {
+        "account_hash": "20184",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 306.65,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-15T23:25:31Z"
+    },
+    {
+        "account_hash": "20185",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 175.32,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-23T12:06:50Z"
+    },
+    {
+        "account_hash": "20186",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 250.44,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-08-31T05:45:11Z"
+    },
+    {
+        "account_hash": "20187",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 368.16,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-30T02:24:40Z"
+    },
+    {
+        "account_hash": "20188",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 408.05,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-24T03:46:10Z"
+    },
+    {
+        "account_hash": "20189",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 893.3,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-10T02:25:07Z"
+    },
+    {
+        "account_hash": "20190",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 699.53,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-11T04:20:24Z"
+    },
+    {
+        "account_hash": "20191",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 679.26,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-06-11T09:18:13Z"
+    },
+    {
+        "account_hash": "20192",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 582.27,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-07-21T09:47:53Z"
+    },
+    {
+        "account_hash": "20193",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 906.15,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-29T03:15:12Z"
+    },
+    {
+        "account_hash": "20194",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 764.81,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-10T09:02:02Z"
+    },
+    {
+        "account_hash": "20195",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 140.81,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-02T17:45:00Z"
+    },
+    {
+        "account_hash": "20196",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 931.4,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-06-13T10:58:47Z"
+    },
+    {
+        "account_hash": "20197",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 99.04,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-11T05:09:26Z"
+    },
+    {
+        "account_hash": "20198",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 164.52,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-02T11:57:14Z"
+    },
+    {
+        "account_hash": "20199",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 423.37,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-07T18:02:05Z"
+    },
+    {
+        "account_hash": "20200",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 765.42,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-10T07:03:58Z"
+    },
+    {
+        "account_hash": "20201",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 481.63,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-22T16:17:29Z"
+    },
+    {
+        "account_hash": "20202",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 479.44,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-12-16T03:47:27Z"
+    },
+    {
+        "account_hash": "20203",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 398.26,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-06-25T08:23:19Z"
+    },
+    {
+        "account_hash": "20204",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 251.43,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-06T23:33:58Z"
+    },
+    {
+        "account_hash": "20205",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 75.5,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-14T16:41:21Z"
+    },
+    {
+        "account_hash": "20206",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 582.94,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-10T15:43:17Z"
+    },
+    {
+        "account_hash": "20207",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 942.99,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-06-10T05:34:11Z"
+    },
+    {
+        "account_hash": "20208",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 650.58,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-05T01:53:07Z"
+    },
+    {
+        "account_hash": "20209",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 144.59,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-30T04:03:22Z"
+    },
+    {
+        "account_hash": "20210",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 413.46,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-09-06T15:29:26Z"
+    },
+    {
+        "account_hash": "20211",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 432.34,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-08T12:18:28Z"
+    },
+    {
+        "account_hash": "20212",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 757.93,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-10-13T00:43:56Z"
+    },
+    {
+        "account_hash": "20213",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 225.86,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-04T08:08:53Z"
+    },
+    {
+        "account_hash": "20214",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 239.1,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-07T14:17:16Z"
+    },
+    {
+        "account_hash": "20215",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 352.49,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-08-22T12:49:17Z"
+    },
+    {
+        "account_hash": "20216",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 464.37,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-23T04:14:58Z"
+    },
+    {
+        "account_hash": "20217",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 678.29,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-08-22T11:38:42Z"
+    },
+    {
+        "account_hash": "20218",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 219.27,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-04T11:32:29Z"
+    },
+    {
+        "account_hash": "20219",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 575.8,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-19T01:23:41Z"
+    },
+    {
+        "account_hash": "20220",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 775.49,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-27T03:19:35Z"
+    },
+    {
+        "account_hash": "20221",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 828.3,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-05T09:25:55Z"
+    },
+    {
+        "account_hash": "20222",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 302.1,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-15T06:02:21Z"
+    },
+    {
+        "account_hash": "20223",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 969.45,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-12T06:44:26Z"
+    },
+    {
+        "account_hash": "20224",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 775.5,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-22T15:33:51Z"
+    },
+    {
+        "account_hash": "20225",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 810.93,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-10T04:28:34Z"
+    },
+    {
+        "account_hash": "20226",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 807.54,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-13T19:00:56Z"
+    },
+    {
+        "account_hash": "20227",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 40.03,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-15T15:13:56Z"
+    },
+    {
+        "account_hash": "20228",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 592.35,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-12-28T23:42:58Z"
+    },
+    {
+        "account_hash": "20229",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 46.04,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-25T03:36:43Z"
+    },
+    {
+        "account_hash": "20230",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 992.5,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-04-04T02:16:02Z"
+    },
+    {
+        "account_hash": "20231",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 565.86,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-25T02:34:11Z"
+    },
+    {
+        "account_hash": "20232",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 179.98,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-11T14:29:25Z"
+    },
+    {
+        "account_hash": "20233",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 266.84,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-09-13T23:52:33Z"
+    },
+    {
+        "account_hash": "20234",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 472.2,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-04-06T14:43:56Z"
+    },
+    {
+        "account_hash": "20235",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 501.04,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-05T08:57:27Z"
+    },
+    {
+        "account_hash": "20236",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 523.37,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-16T04:29:53Z"
+    },
+    {
+        "account_hash": "20237",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 104.96,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-29T02:48:01Z"
+    },
+    {
+        "account_hash": "20238",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 212.64,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-11T15:04:12Z"
+    },
+    {
+        "account_hash": "20239",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 552.34,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-30T02:01:40Z"
+    },
+    {
+        "account_hash": "20240",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 672.91,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-04-28T13:42:27Z"
+    },
+    {
+        "account_hash": "20241",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 888.7,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-12T15:23:02Z"
+    },
+    {
+        "account_hash": "20242",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 928.91,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-07T07:18:57Z"
+    },
+    {
+        "account_hash": "20243",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 224.41,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-01T12:46:33Z"
+    },
+    {
+        "account_hash": "20244",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 439.4,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-14T04:59:36Z"
+    },
+    {
+        "account_hash": "20245",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 400.09,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-10-13T19:53:16Z"
+    },
+    {
+        "account_hash": "20246",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 627.7,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-08T18:58:34Z"
+    },
+    {
+        "account_hash": "20247",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 185.13,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-25T18:47:52Z"
+    },
+    {
+        "account_hash": "20248",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 514.21,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-22T19:45:06Z"
+    },
+    {
+        "account_hash": "20249",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 719.15,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-03-21T09:41:16Z"
+    },
+    {
+        "account_hash": "20250",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 687.68,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-08T05:57:21Z"
+    },
+    {
+        "account_hash": "20251",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 720.71,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-09T23:25:30Z"
+    },
+    {
+        "account_hash": "20252",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 747.25,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-14T12:55:48Z"
+    },
+    {
+        "account_hash": "20253",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 932.67,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-31T02:44:53Z"
+    },
+    {
+        "account_hash": "20254",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 881.34,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-04-17T04:54:27Z"
+    },
+    {
+        "account_hash": "20255",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 241.81,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-16T16:29:18Z"
+    },
+    {
+        "account_hash": "20256",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 430.43,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-19T15:08:32Z"
+    },
+    {
+        "account_hash": "20257",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 523.31,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-04-28T08:29:41Z"
+    },
+    {
+        "account_hash": "20258",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 498.13,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-04T17:00:01Z"
+    },
+    {
+        "account_hash": "20259",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 327.72,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-24T06:21:55Z"
+    },
+    {
+        "account_hash": "20260",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 264.26,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-04-18T05:18:11Z"
+    },
+    {
+        "account_hash": "20261",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 504.85,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-14T01:30:04Z"
+    },
+    {
+        "account_hash": "20262",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 288.48,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-24T14:15:49Z"
+    },
+    {
+        "account_hash": "20263",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 273.32,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-15T00:20:24Z"
+    },
+    {
+        "account_hash": "20264",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 949.98,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-09-30T04:09:59Z"
+    },
+    {
+        "account_hash": "20265",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 424.02,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-09T16:38:19Z"
+    },
+    {
+        "account_hash": "20266",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 439.98,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-28T20:27:36Z"
+    },
+    {
+        "account_hash": "20267",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 828.33,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-02T02:26:24Z"
+    },
+    {
+        "account_hash": "20268",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 67.6,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-12T03:18:19Z"
+    },
+    {
+        "account_hash": "20269",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 469.92,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-17T10:31:14Z"
+    },
+    {
+        "account_hash": "20270",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 226.42,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-12T02:23:15Z"
+    },
+    {
+        "account_hash": "20271",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 682.99,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-17T09:31:46Z"
+    },
+    {
+        "account_hash": "20272",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 343.55,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-05T10:54:42Z"
+    },
+    {
+        "account_hash": "20273",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 667.78,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-28T15:54:16Z"
+    },
+    {
+        "account_hash": "20274",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 772.68,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-16T11:27:22Z"
+    },
+    {
+        "account_hash": "20275",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 588.9,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-29T09:46:47Z"
+    },
+    {
+        "account_hash": "20276",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 909.84,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-04-28T00:33:10Z"
+    },
+    {
+        "account_hash": "20277",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 670.71,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-24T18:00:10Z"
+    },
+    {
+        "account_hash": "20278",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 548.27,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-09-05T20:14:37Z"
+    },
+    {
+        "account_hash": "20279",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 720.95,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-20T01:38:07Z"
+    },
+    {
+        "account_hash": "20280",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 45.1,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-26T12:47:38Z"
+    },
+    {
+        "account_hash": "20281",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 739.0,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-10-08T23:49:52Z"
+    },
+    {
+        "account_hash": "20282",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 227.32,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-04T10:44:31Z"
+    },
+    {
+        "account_hash": "20283",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 231.63,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-26T22:18:36Z"
+    },
+    {
+        "account_hash": "20284",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 34.62,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-14T06:04:12Z"
+    },
+    {
+        "account_hash": "20285",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 393.33,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-10-31T19:01:03Z"
+    },
+    {
+        "account_hash": "20286",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 355.81,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-12T19:18:08Z"
+    },
+    {
+        "account_hash": "20287",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 508.49,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-31T20:41:09Z"
+    },
+    {
+        "account_hash": "20288",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 990.98,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-28T04:25:01Z"
+    },
+    {
+        "account_hash": "20289",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 341.55,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-11T12:39:53Z"
+    },
+    {
+        "account_hash": "20290",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 174.6,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-05-03T20:53:54Z"
+    },
+    {
+        "account_hash": "20291",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 358.5,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-27T08:23:16Z"
+    },
+    {
+        "account_hash": "20292",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 711.32,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-21T16:53:35Z"
+    },
+    {
+        "account_hash": "20293",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 359.36,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-13T00:00:09Z"
+    },
+    {
+        "account_hash": "20294",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 290.14,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-29T14:28:33Z"
+    },
+    {
+        "account_hash": "20295",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 655.4,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-19T22:28:20Z"
+    },
+    {
+        "account_hash": "20296",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 160.87,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-04-26T08:06:18Z"
+    },
+    {
+        "account_hash": "20297",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 330.33,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-24T03:14:23Z"
+    },
+    {
+        "account_hash": "20298",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 705.25,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-07-18T09:48:12Z"
+    },
+    {
+        "account_hash": "20299",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 495.8,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-01T15:51:55Z"
+    },
+    {
+        "account_hash": "20300",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 524.38,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-12T01:34:15Z"
+    },
+    {
+        "account_hash": "20301",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 693.18,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-22T01:06:04Z"
+    },
+    {
+        "account_hash": "20302",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 577.37,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-02T15:50:07Z"
+    },
+    {
+        "account_hash": "20303",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 396.29,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-03T07:05:50Z"
+    },
+    {
+        "account_hash": "20304",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 472.73,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-09-04T02:15:27Z"
+    },
+    {
+        "account_hash": "20305",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 332.72,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-25T08:31:24Z"
+    },
+    {
+        "account_hash": "20306",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 367.36,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-18T02:13:52Z"
+    },
+    {
+        "account_hash": "20307",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 840.98,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-02T15:32:20Z"
+    },
+    {
+        "account_hash": "20308",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 255.82,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-15T19:44:27Z"
+    },
+    {
+        "account_hash": "20309",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 511.79,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-03T08:18:03Z"
+    },
+    {
+        "account_hash": "20310",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 442.42,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-04-10T19:58:03Z"
+    },
+    {
+        "account_hash": "20311",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 691.68,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-08-09T10:41:25Z"
+    },
+    {
+        "account_hash": "20312",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 261.69,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-03T14:25:58Z"
+    },
+    {
+        "account_hash": "20313",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 913.28,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-07-16T20:45:43Z"
+    },
+    {
+        "account_hash": "20314",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 968.7,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-21T02:12:40Z"
+    },
+    {
+        "account_hash": "20315",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 381.28,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-26T20:37:35Z"
+    },
+    {
+        "account_hash": "20316",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 946.21,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-24T21:23:29Z"
+    },
+    {
+        "account_hash": "20317",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 927.52,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-05-11T11:18:01Z"
+    },
+    {
+        "account_hash": "20318",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 922.78,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-04T09:47:33Z"
+    },
+    {
+        "account_hash": "20319",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 591.8,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-04T20:01:33Z"
+    },
+    {
+        "account_hash": "20320",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 411.76,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-05T01:58:59Z"
+    },
+    {
+        "account_hash": "20321",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 636.27,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-12-25T08:23:10Z"
+    },
+    {
+        "account_hash": "20322",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 924.73,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-01T17:21:32Z"
+    },
+    {
+        "account_hash": "20323",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 860.0,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-19T16:01:13Z"
+    },
+    {
+        "account_hash": "20324",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 954.24,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-04T02:04:30Z"
+    },
+    {
+        "account_hash": "20325",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 279.38,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-08T02:21:20Z"
+    },
+    {
+        "account_hash": "20326",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 300.39,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-06-30T04:31:46Z"
+    },
+    {
+        "account_hash": "20327",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 582.86,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-27T20:39:19Z"
+    },
+    {
+        "account_hash": "20328",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 911.69,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-05-12T19:26:10Z"
+    },
+    {
+        "account_hash": "20329",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 510.28,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-08-09T13:47:25Z"
+    },
+    {
+        "account_hash": "20330",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 549.84,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-12-02T21:06:20Z"
+    },
+    {
+        "account_hash": "20331",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 545.91,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-23T17:58:08Z"
+    },
+    {
+        "account_hash": "20332",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 196.44,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-19T02:41:42Z"
+    },
+    {
+        "account_hash": "20333",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 555.71,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-08T02:36:30Z"
+    },
+    {
+        "account_hash": "20334",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 125.66,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-10-05T05:34:50Z"
+    },
+    {
+        "account_hash": "20335",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 704.38,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-08T04:51:13Z"
+    },
+    {
+        "account_hash": "20336",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 680.68,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-10T11:29:24Z"
+    },
+    {
+        "account_hash": "20337",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 184.41,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-20T21:31:59Z"
+    },
+    {
+        "account_hash": "20338",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 593.91,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-03T15:19:43Z"
+    },
+    {
+        "account_hash": "20339",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 547.65,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-23T23:31:35Z"
+    },
+    {
+        "account_hash": "20340",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 459.17,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-12-10T21:02:43Z"
+    },
+    {
+        "account_hash": "20341",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 418.03,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-06-22T04:56:43Z"
+    },
+    {
+        "account_hash": "20342",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 374.54,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-08T21:56:44Z"
+    },
+    {
+        "account_hash": "20343",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 106.13,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-17T05:18:43Z"
+    },
+    {
+        "account_hash": "20344",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 445.95,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-01T10:36:16Z"
+    },
+    {
+        "account_hash": "20345",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 457.27,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-21T04:35:53Z"
+    },
+    {
+        "account_hash": "20346",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 742.0,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-10-30T03:04:55Z"
+    },
+    {
+        "account_hash": "20347",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 620.86,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-28T10:24:10Z"
+    },
+    {
+        "account_hash": "20348",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 598.07,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-08-06T04:08:08Z"
+    },
+    {
+        "account_hash": "20349",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 516.51,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-10-30T12:20:37Z"
+    },
+    {
+        "account_hash": "20350",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 942.51,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-28T12:51:07Z"
+    },
+    {
+        "account_hash": "20351",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 174.29,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-21T07:54:32Z"
+    },
+    {
+        "account_hash": "20352",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 248.04,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-28T21:03:36Z"
+    },
+    {
+        "account_hash": "20353",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 801.93,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-04-12T17:01:28Z"
+    },
+    {
+        "account_hash": "20354",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 426.5,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-04-15T02:31:23Z"
+    },
+    {
+        "account_hash": "20355",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 226.2,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-25T21:11:25Z"
+    },
+    {
+        "account_hash": "20356",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 546.24,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-12T17:43:57Z"
+    },
+    {
+        "account_hash": "20357",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 157.77,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-09T11:56:46Z"
+    },
+    {
+        "account_hash": "20358",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 737.93,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-01-09T16:27:15Z"
+    },
+    {
+        "account_hash": "20359",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 78.83,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-12-10T00:07:00Z"
+    },
+    {
+        "account_hash": "20360",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 299.22,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-01T16:52:14Z"
+    },
+    {
+        "account_hash": "20361",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 580.56,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-04T03:11:31Z"
+    },
+    {
+        "account_hash": "20362",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 681.88,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-04-02T05:41:39Z"
+    },
+    {
+        "account_hash": "20363",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 183.26,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-04-22T20:23:18Z"
+    },
+    {
+        "account_hash": "20364",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 367.73,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-24T11:02:06Z"
+    },
+    {
+        "account_hash": "20365",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 164.58,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-11T13:18:33Z"
+    },
+    {
+        "account_hash": "20366",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 202.07,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-29T23:20:06Z"
+    },
+    {
+        "account_hash": "20367",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 750.02,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-09T09:52:55Z"
+    },
+    {
+        "account_hash": "20368",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 568.56,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-01-12T11:32:40Z"
+    },
+    {
+        "account_hash": "20369",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 967.0,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-13T03:27:04Z"
+    },
+    {
+        "account_hash": "20370",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 425.51,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-12-03T05:57:54Z"
+    },
+    {
+        "account_hash": "20371",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 943.01,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-16T14:29:37Z"
+    },
+    {
+        "account_hash": "20372",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 420.38,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-07-16T09:25:46Z"
+    },
+    {
+        "account_hash": "20373",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 862.63,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-21T21:17:36Z"
+    },
+    {
+        "account_hash": "20374",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 179.36,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-05T09:13:04Z"
+    },
+    {
+        "account_hash": "20375",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 497.43,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-04T00:30:55Z"
+    },
+    {
+        "account_hash": "20376",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 27.61,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-06-12T16:11:10Z"
+    },
+    {
+        "account_hash": "20377",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 745.63,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-03-04T22:28:39Z"
+    },
+    {
+        "account_hash": "20378",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 90.06,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-27T08:33:28Z"
+    },
+    {
+        "account_hash": "20379",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 583.59,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-11T07:53:35Z"
+    },
+    {
+        "account_hash": "20380",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 355.37,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-16T01:00:01Z"
+    },
+    {
+        "account_hash": "20381",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 41.11,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-02T13:39:05Z"
+    },
+    {
+        "account_hash": "20382",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 495.94,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-04T07:00:52Z"
+    },
+    {
+        "account_hash": "20383",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 711.33,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-04T06:50:40Z"
+    },
+    {
+        "account_hash": "20384",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 401.83,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-01-30T14:09:44Z"
+    },
+    {
+        "account_hash": "20385",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 964.35,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-21T01:45:33Z"
+    },
+    {
+        "account_hash": "20386",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 950.32,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-08-15T17:34:29Z"
+    },
+    {
+        "account_hash": "20387",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 254.96,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-28T03:16:13Z"
+    },
+    {
+        "account_hash": "20388",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 837.77,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-28T08:54:45Z"
+    },
+    {
+        "account_hash": "20389",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 708.17,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-07-13T18:10:10Z"
+    },
+    {
+        "account_hash": "20390",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 415.82,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-04-19T03:23:25Z"
+    },
+    {
+        "account_hash": "20391",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 617.98,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-04-01T03:31:20Z"
+    },
+    {
+        "account_hash": "20392",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 657.79,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-05-04T11:30:19Z"
+    },
+    {
+        "account_hash": "20393",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 789.35,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-05-06T03:46:30Z"
+    },
+    {
+        "account_hash": "20394",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 651.68,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-28T18:07:19Z"
+    },
+    {
+        "account_hash": "20395",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 351.03,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-14T23:45:25Z"
+    },
+    {
+        "account_hash": "20396",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 381.31,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-04-13T05:44:45Z"
+    },
+    {
+        "account_hash": "20397",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 942.83,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-04T00:38:01Z"
+    },
+    {
+        "account_hash": "20398",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 876.59,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-11T02:52:48Z"
+    },
+    {
+        "account_hash": "20399",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 58.66,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-03T14:45:36Z"
+    },
+    {
+        "account_hash": "20400",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 176.49,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-10-30T10:11:17Z"
+    },
+    {
+        "account_hash": "20401",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 206.04,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-12-21T01:38:07Z"
+    },
+    {
+        "account_hash": "20402",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 296.15,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-02T18:47:24Z"
+    },
+    {
+        "account_hash": "20403",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 593.05,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-16T16:43:49Z"
+    },
+    {
+        "account_hash": "20404",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 230.08,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-20T10:31:01Z"
+    },
+    {
+        "account_hash": "20405",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 371.76,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-16T17:05:56Z"
+    },
+    {
+        "account_hash": "20406",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 891.54,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-11-21T10:51:00Z"
+    },
+    {
+        "account_hash": "20407",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 990.1,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-22T03:12:35Z"
+    },
+    {
+        "account_hash": "20408",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 39.81,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-20T15:47:15Z"
+    },
+    {
+        "account_hash": "20409",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 822.0,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-31T00:02:31Z"
+    },
+    {
+        "account_hash": "20410",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 331.94,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-03T00:19:15Z"
+    },
+    {
+        "account_hash": "20411",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 635.41,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-16T22:16:00Z"
+    },
+    {
+        "account_hash": "20412",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 904.81,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-09T17:34:50Z"
+    },
+    {
+        "account_hash": "20413",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 979.16,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-12-29T23:48:52Z"
+    },
+    {
+        "account_hash": "20414",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 875.35,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-05T15:12:32Z"
+    },
+    {
+        "account_hash": "20415",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 738.9,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-05T11:02:11Z"
+    },
+    {
+        "account_hash": "20416",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 868.4,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-09-28T11:06:39Z"
+    },
+    {
+        "account_hash": "20417",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 362.06,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-20T23:04:19Z"
+    },
+    {
+        "account_hash": "20418",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 113.61,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-17T14:25:24Z"
+    },
+    {
+        "account_hash": "20419",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 510.57,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-04-28T14:16:29Z"
+    },
+    {
+        "account_hash": "20420",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Credit",
+        "amount": 959.58,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-30T11:36:38Z"
+    },
+    {
+        "account_hash": "20421",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 674.73,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-16T10:43:23Z"
+    },
+    {
+        "account_hash": "20422",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 81.76,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-09T09:40:30Z"
+    },
+    {
+        "account_hash": "20423",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 443.41,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-09-28T19:32:03Z"
+    },
+    {
+        "account_hash": "20424",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 154.91,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-16T05:48:43Z"
+    },
+    {
+        "account_hash": "20425",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 691.94,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-02-12T11:12:02Z"
+    },
+    {
+        "account_hash": "20426",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 351.36,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-12T13:45:22Z"
+    },
+    {
+        "account_hash": "20427",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 832.32,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-09T14:15:32Z"
+    },
+    {
+        "account_hash": "20428",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 676.08,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-06-29T21:11:26Z"
+    },
+    {
+        "account_hash": "20429",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 322.2,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-12-10T08:42:20Z"
+    },
+    {
+        "account_hash": "20430",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 721.1,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-08-23T08:30:58Z"
+    },
+    {
+        "account_hash": "20431",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 463.52,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-02-17T07:34:07Z"
+    },
+    {
+        "account_hash": "20432",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 205.34,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-01-17T07:25:35Z"
+    },
+    {
+        "account_hash": "20433",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 898.16,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-03-20T07:43:19Z"
+    },
+    {
+        "account_hash": "20434",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 781.66,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-14T10:13:47Z"
+    },
+    {
+        "account_hash": "20435",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 617.69,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-09-29T00:47:20Z"
+    },
+    {
+        "account_hash": "20436",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 989.16,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-07-28T23:43:49Z"
+    },
+    {
+        "account_hash": "20437",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 556.24,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-02-15T12:42:48Z"
+    },
+    {
+        "account_hash": "20438",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 278.49,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-04T04:16:01Z"
+    },
+    {
+        "account_hash": "20439",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 574.04,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-15T19:06:24Z"
+    },
+    {
+        "account_hash": "20440",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 748.54,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-12-03T16:50:11Z"
+    },
+    {
+        "account_hash": "20441",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 721.0,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-08-15T04:45:15Z"
+    },
+    {
+        "account_hash": "20442",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 374.08,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-15T14:16:15Z"
+    },
+    {
+        "account_hash": "20443",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 208.77,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-13T18:50:44Z"
+    },
+    {
+        "account_hash": "20444",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 360.72,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-06-16T10:40:45Z"
+    },
+    {
+        "account_hash": "20445",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 395.21,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-15T12:02:31Z"
+    },
+    {
+        "account_hash": "20446",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 700.08,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-07-25T14:38:31Z"
+    },
+    {
+        "account_hash": "20447",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 802.86,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-22T13:07:10Z"
+    },
+    {
+        "account_hash": "20448",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "transaction_type": "Debit",
+        "amount": 10.87,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-17T21:02:35Z"
+    },
+    {
+        "account_hash": "20449",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 928.74,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-04-18T08:59:56Z"
+    },
+    {
+        "account_hash": "20450",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 711.79,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-02T00:48:23Z"
+    },
+    {
+        "account_hash": "20451",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 456.04,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-05-28T14:07:27Z"
+    },
+    {
+        "account_hash": "20452",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 369.28,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-05-16T09:17:08Z"
+    },
+    {
+        "account_hash": "20453",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Debit",
+        "amount": 339.96,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-08-20T03:52:59Z"
+    },
+    {
+        "account_hash": "20454",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 893.89,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-12-09T07:29:47Z"
+    },
+    {
+        "account_hash": "20455",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 996.99,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-21T02:13:40Z"
+    },
+    {
+        "account_hash": "20456",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 255.72,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-19T01:03:54Z"
+    },
+    {
+        "account_hash": "20457",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 431.21,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-21T19:57:14Z"
+    },
+    {
+        "account_hash": "20458",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 864.83,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-02-19T22:02:00Z"
+    },
+    {
+        "account_hash": "20459",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Debit",
+        "amount": 737.32,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-07T23:23:10Z"
+    },
+    {
+        "account_hash": "20460",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 702.91,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-18T12:26:52Z"
+    },
+    {
+        "account_hash": "20461",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 396.67,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-12T14:49:33Z"
+    },
+    {
+        "account_hash": "20462",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 750.3,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-26T16:05:51Z"
+    },
+    {
+        "account_hash": "20463",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 115.62,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-12-11T01:45:03Z"
+    },
+    {
+        "account_hash": "20464",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 975.79,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-06-09T02:00:16Z"
+    },
+    {
+        "account_hash": "20465",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Debit",
+        "amount": 990.99,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-20T17:43:14Z"
+    },
+    {
+        "account_hash": "20466",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 145.14,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-03-02T17:52:02Z"
+    },
+    {
+        "account_hash": "20467",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 797.29,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-02-24T16:01:02Z"
+    },
+    {
+        "account_hash": "20468",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 15.61,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-09-30T07:45:43Z"
+    },
+    {
+        "account_hash": "20469",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 812.23,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-03-14T21:38:09Z"
+    },
+    {
+        "account_hash": "20470",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 664.78,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-10T16:04:01Z"
+    },
+    {
+        "account_hash": "20471",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Credit",
+        "amount": 830.57,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-10-17T21:59:45Z"
+    },
+    {
+        "account_hash": "20472",
+        "first_name": "Eve",
+        "last_name": "Adams",
+        "transaction_type": "Credit",
+        "amount": 445.11,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-06T17:30:26Z"
+    },
+    {
+        "account_hash": "20473",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 181.71,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-05-04T16:09:19Z"
+    },
+    {
+        "account_hash": "20474",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 588.33,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-01-31T02:35:42Z"
+    },
+    {
+        "account_hash": "20475",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 901.13,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-11-14T13:22:04Z"
+    },
+    {
+        "account_hash": "20476",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 580.99,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-09T10:19:56Z"
+    },
+    {
+        "account_hash": "20477",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Debit",
+        "amount": 806.4,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-10-03T12:21:20Z"
+    },
+    {
+        "account_hash": "20478",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 419.99,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-11-16T16:58:00Z"
+    },
+    {
+        "account_hash": "20479",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 579.4,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-07-06T07:14:27Z"
+    },
+    {
+        "account_hash": "20480",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 667.15,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-07-09T03:39:54Z"
+    },
+    {
+        "account_hash": "20481",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 705.1,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-05T13:29:59Z"
+    },
+    {
+        "account_hash": "20482",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Credit",
+        "amount": 35.38,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-12-11T07:47:12Z"
+    },
+    {
+        "account_hash": "20483",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Debit",
+        "amount": 731.38,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-05-12T09:25:14Z"
+    },
+    {
+        "account_hash": "20484",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 256.35,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-02-19T14:51:23Z"
+    },
+    {
+        "account_hash": "20485",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "transaction_type": "Debit",
+        "amount": 889.62,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-03T13:54:44Z"
+    },
+    {
+        "account_hash": "20486",
+        "first_name": "Ivan",
+        "last_name": "Blue",
+        "transaction_type": "Credit",
+        "amount": 517.98,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-11-23T06:25:50Z"
+    },
+    {
+        "account_hash": "20487",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 695.52,
+        "merchant_category": "Restaurants",
+        "transaction_time": "2025-06-30T21:37:50Z"
+    },
+    {
+        "account_hash": "20488",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Credit",
+        "amount": 252.35,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-09-30T20:07:48Z"
+    },
+    {
+        "account_hash": "20489",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 315.64,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-04-19T21:33:43Z"
+    },
+    {
+        "account_hash": "20490",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Credit",
+        "amount": 989.26,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-09-19T18:12:51Z"
+    },
+    {
+        "account_hash": "20491",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 973.69,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-09-12T23:45:38Z"
+    },
+    {
+        "account_hash": "20492",
+        "first_name": "Diana",
+        "last_name": "Prince",
+        "transaction_type": "Debit",
+        "amount": 98.06,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-12-16T23:48:23Z"
+    },
+    {
+        "account_hash": "20493",
+        "first_name": "Grace",
+        "last_name": "Black",
+        "transaction_type": "Credit",
+        "amount": 662.0,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-04-26T17:09:18Z"
+    },
+    {
+        "account_hash": "20494",
+        "first_name": "Frank",
+        "last_name": "White",
+        "transaction_type": "Credit",
+        "amount": 882.48,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-08-14T04:38:02Z"
+    },
+    {
+        "account_hash": "20495",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 758.16,
+        "merchant_category": "Gas",
+        "transaction_time": "2025-11-22T14:15:50Z"
+    },
+    {
+        "account_hash": "20496",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 894.68,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-30T04:41:05Z"
+    },
+    {
+        "account_hash": "20497",
+        "first_name": "Charlie",
+        "last_name": "Brown",
+        "transaction_type": "Debit",
+        "amount": 813.83,
+        "merchant_category": "Groceries",
+        "transaction_time": "2025-10-09T20:53:53Z"
+    },
+    {
+        "account_hash": "20498",
+        "first_name": "Heidi",
+        "last_name": "Green",
+        "transaction_type": "Credit",
+        "amount": 449.33,
+        "merchant_category": "Shopping",
+        "transaction_time": "2025-06-29T07:53:55Z"
+    },
+    {
+        "account_hash": "20499",
+        "first_name": "Judy",
+        "last_name": "Red",
+        "transaction_type": "Debit",
+        "amount": 266.2,
+        "merchant_category": "Utilities",
+        "transaction_time": "2025-02-28T23:03:38Z"
+    }
+]
