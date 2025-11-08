@@ -1,103 +1,63 @@
-import asyncio
-import grpc
 import json
-import os
-import asyncpg
-import uuid
-from dotenv import load_dotenv
+import requests
+import time
+import asyncio
 
-import datavault_pb2
-import datavault_pb2_grpc
+from simulations.ingest import ingest_data
+from simulations.embed import embed_data
 
-# Load environment variables
-load_dotenv()
-
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost:5432/datavault")
-
-async def run_test():
-    # Setup gRPC channel
-    channel = grpc.aio.insecure_channel('localhost:50051')
-    stub = datavault_pb2_grpc.DataVaultServiceStub(channel)
-
-    # Setup direct DB connection
-    conn = await asyncpg.connect(DATABASE_URL)
+def query_rag_api(query: str):
+    """
+    Sends a query to the RAG API and prints the response.
+    """
+    print(f"\n--- Querying RAG API with: '{query}' ---")
+    api_url = "http://localhost:8000/rag_query"
+    payload = {"query": query}
+    headers = {"Content-Type": "application/json"}
 
     try:
-        print("--- Starting Mini Test ---")
+        response = requests.post(api_url, data=json.dumps(payload), headers=headers)
+        response.raise_for_status()
+        print("RAG API Response:")
+        print(response.json().get("response"))
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred while querying the RAG API: {e}")
 
-        # --- Test Healthcare Data ---
-        print("\n--- Testing Healthcare Data ---")
-        healthcare_file_path = '/app/simulations/datasets/healthcare.json'
-        with open(healthcare_file_path, 'r') as f:
-            healthcare_data_samples = json.load(f)[:3] # Take 3 samples
+async def run_e2e_test():
+    """
+    Runs an end-to-end test of the DataVault pipeline.
+    """
+    print("--- Starting End-to-End Test ---")
+    
+    # Wait for services to be ready
+    print("Waiting for services to start... (15s)")
+    time.sleep(15)
 
-        for i, record in enumerate(healthcare_data_samples):
-            print(f"\n--- Healthcare Record {i+1} ---")
-            print(f"Original Data: {record}")
+    # 1. Load test data
+    print("\n--- Step 1: Loading test data ---")
+    with open('simulations/datasets/healthcare.json', 'r') as f:
+        healthcare_samples = json.load(f)[:5]
+    with open('simulations/datasets/finance.json', 'r') as f:
+        finance_samples = json.load(f)[:5]
+    print("Loaded 5 healthcare and 5 finance records.")
 
-            # 1. Ingest data via gRPC
-            response = await stub.Ingest(datavault_pb2.DataRecord(data_type='healthcare', data=json.dumps(record).encode()))
-            print(f"Ingestion Response: ID={response.id}, Status={response.status}")
+    # 2. Ingest data via gRPC
+    print("\n--- Step 2: Ingesting data via gRPC ---")
+    ingest_data(healthcare_samples, 'healthcare')
+    ingest_data(finance_samples, 'finance')
+    print("Ingestion complete.")
 
-            if response.status == "OK":
-                record_id = uuid.UUID(response.id)
+    # 3. Embed data from PostgreSQL into ChromaDB
+    print("\n--- Step 3: Embedding data into ChromaDB ---")
+    await embed_data()
+    print("Embedding complete.")
 
-                # 2. Verify direct DB access (should be encrypted)
-                db_row = await conn.fetchrow('SELECT data FROM encrypted_blobs WHERE id = $1', record_id)
-                if db_row:
-                    encrypted_blob_from_db = db_row['data']
-                    print(f"Direct DB Access (Encrypted Blob): {encrypted_blob_from_db[:50]}... (truncated for brevity)")
-                    print(f"  (This blob should be unreadable without decryption key)")
-                else:
-                    print("Error: Encrypted blob not found in DB.")
+    # 4. Query the RAG API
+    print("\n--- Step 4: Querying the RAG API ---")
+    query_rag_api("What are the risks of high-risk investments?")
+    query_rag_api("What are common treatments for hypertension?")
 
-                # 3. Verify decryption via gRPC (should be anonymized)
-                retrieve_response = await stub.Retrieve(datavault_pb2.IngestResponse(id=response.id))
-                decrypted_data = json.loads(retrieve_response.data.decode('utf-8'))
-                print(f"Decrypted Data (via gRPC Retrieve): {decrypted_data}")
-                print(f"  (Verify names and age are anonymized compared to original data)")
-            else:
-                print(f"Ingestion failed for record {i+1}.")
-
-        # --- Test Finance Data ---
-        print("\n--- Testing Finance Data ---")
-        finance_file_path = '/app/simulations/datasets/finance.json'
-        with open(finance_file_path, 'r') as f:
-            finance_data_samples = json.load(f)[:3] # Take 3 samples
-
-        for i, record in enumerate(finance_data_samples):
-            print(f"\n--- Finance Record {i+1} ---")
-            print(f"Original Data: {record}")
-
-            # 1. Ingest data via gRPC
-            response = await stub.Ingest(datavault_pb2.DataRecord(data_type='finance', data=json.dumps(record).encode()))
-            print(f"Ingestion Response: ID={response.id}, Status={response.status}")
-
-            if response.status == "OK":
-                record_id = uuid.UUID(response.id)
-
-                # 2. Verify direct DB access (should be encrypted)
-                db_row = await conn.fetchrow('SELECT data FROM encrypted_blobs WHERE id = $1', record_id)
-                if db_row:
-                    encrypted_blob_from_db = db_row['data']
-                    print(f"Direct DB Access (Encrypted Blob): {encrypted_blob_from_db[:50]}... (truncated for brevity)")
-                    print(f"  (This blob should be unreadable without decryption key)")
-                else:
-                    print("Error: Encrypted blob not found in DB.")
-
-                # 3. Verify decryption via gRPC (should be anonymized)
-                retrieve_response = await stub.Retrieve(datavault_pb2.IngestResponse(id=response.id))
-                decrypted_data = json.loads(retrieve_response.data.decode('utf-8'))
-                print(f"Decrypted Data (via gRPC Retrieve): {decrypted_data}")
-                print(f"  (Verify names and age are anonymized compared to original data)")
-            else:
-                print(f"Ingestion failed for record {i+1}.")
-
-        print("\n--- Mini Test Complete ---")
-
-    finally:
-        await channel.close()
-        await conn.close()
+    print("\n--- End-to-End Test Complete ---")
 
 if __name__ == "__main__":
-    asyncio.run(run_test())
+    asyncio.run(run_e2e_test())

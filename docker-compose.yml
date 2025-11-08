@@ -21,6 +21,14 @@ services:
     volumes:
       - redis_data:/data
 
+  chroma:
+    image: chromadb/chroma
+    restart: always
+    ports:
+      - '8001:8000'
+    volumes:
+      - chroma_data:/chroma/.chroma/index
+
   backend:
     build:
       context: .
@@ -31,13 +39,16 @@ services:
     depends_on:
       - postgres
       - redis
+      - chroma
+    env_file:
+      - .env
     environment:
       - DATABASE_URL=postgresql://user:password@postgres/datavault
       - REDIS_URL=redis://redis:6379
       - ENCRYPTION_KEY=01234567890123456789012345678901
-
-  
+      - CHROMA_HOST=chroma
 
 volumes:
   postgres_data:
   redis_data:
+  chroma_data:

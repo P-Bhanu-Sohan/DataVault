@@ -15,3 +15,6 @@ snowflake-connector-python
 vultr-python
 gemini-api
 asyncpg
+google-generativeai
+chromadb-client
+sentence-transformers

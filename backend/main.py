@@ -7,66 +7,81 @@ from dotenv import load_dotenv
 import json
 import uuid
 import hashlib
-import base64
-import asyncpg # For PostgreSQL async operations
+import asyncpg
+import chromadb
+import google.generativeai as genai
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import uvicorn
+from sentence_transformers import SentenceTransformer
 
 from anonymizer import redact_names, anonymize_age
 from crypto_utils import encrypt_json, decrypt_json
 
-import datavault_pb2
-import datavault_pb2_grpc
+from backend.generated import datavault_pb2, datavault_pb2_grpc
 
 # Load environment variables
 load_dotenv()
 
 # --- Configuration ---
-SECRET_KEY = os.getenv("ENCRYPTION_KEY", "12345678901234567890123456789012").encode('utf-8') # 32-byte key
+SECRET_KEY = os.getenv("ENCRYPTION_KEY", "12345678901234567890123456789012").encode('utf-8')
 if len(SECRET_KEY) != 32:
     raise ValueError("ENCRYPTION_KEY must be 32 bytes long")
 
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost:5432/datavault")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    raise ValueError("GEMINI_API_KEY not found in .env file or environment variables")
+genai.configure(api_key=GEMINI_API_KEY)
 
-# PostgreSQL connection pool
+CHROMA_HOST = os.getenv("CHROMA_HOST", "localhost")
+
+# --- Globals ---
 pool = None
+embedding_model = None
+generative_model = None
 
-async def init_db_pool():
-    global pool
+# --- FastAPI Application ---
+app = FastAPI()
+
+@app.on_event("startup")
+async def startup_event():
+    """
+    Initialize models and database pool on startup.
+    """
+    global pool, embedding_model, generative_model
     pool = await asyncpg.create_pool(DATABASE_URL)
     logging.info("PostgreSQL connection pool created.")
+    
+    logging.info("Loading Sentence Transformer model...")
+    embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+    logging.info("Embedding model loaded.")
+
+    logging.info("Loading Generative model...")
+    generative_model = genai.GenerativeModel('gemini-2.5-flash-lite')
+    logging.info("Generative model loaded.")
+
 
 # --- gRPC Service ---
 class DataVaultService(datavault_pb2_grpc.DataVaultServiceServicer):
-    def __init__(self):
-        pass # No redis_client needed here anymore
-
     async def Ingest(self, request, context):
         try:
             data = json.loads(request.data)
             record_id = uuid.uuid4()
-
-            # Prepare data for anonymization and encryption
-            anonymized_data_for_encryption = {**data} # Start with a copy of the original data
-
-            # Apply PII removal and anonymization to the data that will be encrypted
-            original_first_name = anonymized_data_for_encryption.get('first_name', 'AnonF')
-            original_last_name = anonymized_data_for_encryption.get('last_name', 'AnonL')
-            original_age = anonymized_data_for_encryption.get('age')
-
-            # Anonymize names
-            anonymized_names = redact_names([{'first_name': original_first_name, 'last_name': original_last_name}])
-            anonymized_data_for_encryption['first_name'] = anonymized_names[0]['first_name']
-            anonymized_data_for_encryption['last_name'] = anonymized_names[0]['last_name']
-
-            # Anonymize age
-            if original_age is not None:
-                anonymized_data_for_encryption['age'] = anonymize_age(original_age)
+            anonymized_data = {**data}
             
-            # Encrypt the anonymized data
-            encrypted_data_b64 = encrypt_json(anonymized_data_for_encryption, SECRET_KEY)
+            if 'first_name' in anonymized_data and 'last_name' in anonymized_data:
+                anonymized_names = redact_names([{'first_name': anonymized_data['first_name'], 'last_name': anonymized_data['last_name']}])
+                anonymized_data['first_name'] = anonymized_names[0]['first_name']
+                anonymized_data['last_name'] = anonymized_names[0]['last_name']
+
+            if 'age' in anonymized_data:
+                anonymized_data['age'] = anonymize_age(anonymized_data['age'])
+            
+            encrypted_data_b64 = encrypt_json(anonymized_data, SECRET_KEY)
             data_hash = hashlib.sha256(encrypted_data_b64.encode('utf-8')).hexdigest()
 
             async with pool.acquire() as conn:
-                # Insert only the encrypted blob into encrypted_blobs
                 await conn.execute(
                     'INSERT INTO encrypted_blobs (id, data, data_type, data_hash) VALUES ($1, $2, $3, $4)',
                     record_id, encrypted_data_b64.encode('utf-8'), request.data_type, data_hash
@@ -99,24 +114,58 @@ class DataVaultService(datavault_pb2_grpc.DataVaultServiceServicer):
             context.set_details(f"Error retrieving data: {e}")
             return datavault_pb2.DataRecord(data_type="", data=b"")
 
+# --- RAG Endpoint ---
+class RAGQuery(BaseModel):
+    query: str
+
+class RAGResponse(BaseModel):
+    response: str
+
+@app.post("/rag_query", response_model=RAGResponse)
+async def rag_query(query: RAGQuery):
+    try:
+        chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=8000)
+        collection = chroma_client.get_collection(name="datavault_anonymized")
+        
+        query_embedding = embedding_model.encode(query.query).tolist()
+        
+        results = collection.query(query_embeddings=[query_embedding], n_results=5)
+        documents = results.get('documents', [])
+        if not documents or not documents[0]:
+            raise HTTPException(status_code=404, detail="No relevant documents found.")
+        
+        context = "\n".join(documents[0])
+        prompt = f"Based on the following context, please answer the user's query.\n\nContext:\n{context}\n\nUser Query:\n{query.query}"
+        
+        response = await generative_model.generate_content_async(prompt)
+        return RAGResponse(response=response.text)
+    except Exception as e:
+        logging.error(f"Error during RAG query: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/")
+def read_root():
+    return {"message": "DataVault RAG API is running"}
+
+# --- Server Startup ---
 async def serve_grpc():
     server = grpc.aio.server(futures.ThreadPoolExecutor(max_workers=10))
     datavault_pb2_grpc.add_DataVaultServiceServicer_to_server(DataVaultService(), server)
     server.add_insecure_port('[::]:50051')
     logging.info("Starting gRPC server on port 50051")
     await server.start()
-    logging.info("gRPC server started.")
     await server.wait_for_termination()
-    logging.info("gRPC server terminated.")
+
+async def serve_fastapi():
+    config = uvicorn.Config(app, host="0.0.0.0", port=8000, log_level="info")
+    server = uvicorn.Server(config)
+    logging.info("Starting FastAPI server on port 8000")
+    await server.serve()
 
 async def main():
     logging.basicConfig(level=logging.INFO)
-    await init_db_pool() # Initialize the database pool
-    
-    # Start gRPC server
-    await serve_grpc()
+    # The startup event will handle initialization
+    await asyncio.gather(serve_grpc(), serve_fastapi())
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-

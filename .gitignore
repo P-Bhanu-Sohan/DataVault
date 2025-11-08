@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-wheel-metadata/
+*.egg-info/
+pip-selfcheck.json
+
+# Docker
+docker-compose.override.yml
+
+# Environment
+.env
