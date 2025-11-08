@@ -43,9 +43,7 @@ The target architecture introduces several new components and modifies existing 
 | (LLM Integration) |       | (Semantic Search) |       | Embedding Service |
 +-------------------+       +-------------------+       +-------------------+
 ```
-
 **Key Architectural Changes:**
-
 *   **Redis Streams for Ingestion:** Data from generators will first be pushed to Redis Streams, acting as a message broker for real-time ingestion.
 *   **Dedicated Data Processor Service:** A new service will consume from the Redis Stream, perform anonymization and encryption, and then store the encrypted data in PostgreSQL. This decouples ingestion from processing.
 *   **PostgreSQL as Encrypted Data Store:** Remains the primary store for encrypted, anonymized data.

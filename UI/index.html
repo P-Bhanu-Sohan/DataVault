@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataVault - Secure Pipeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #0a0a0a 100%);
+            min-height: 100vh;
+            color: #e5e5e5;
+            overflow-x: hidden;
+            padding-left: 55px; /* Shift content to the right */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 500px;
+            gap: 48px; /* Increased gap */
+            padding: 24px;
+            max-width: 1800px;
+            margin: 0 auto;
+            height: 100vh;
+        }
+
+        .header {
+            position: absolute;
+            top: 40px;
+            left: 24px;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px; /* Increased font size */
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 44px; /* Increased width */
+            height: 44px; /* Increased height */
+            background: #ffffff; /* Changed to white */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px; /* Increased font size */
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .pipeline-section {
+            background: rgba(45, 45, 45, 0.4);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 140, 66, 0.15);
+            padding: 140px 40px 40px;
+            overflow-y: auto;
+        }
+
+        .chatbot-section {
+            background: rgba(45, 45, 45, 0.4);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 140, 66, 0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .pipeline-node {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(255, 140, 66, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pipeline-node.active {
+            background: rgba(255, 140, 66, 0.15);
+            border-color: #ff8c42;
+            box-shadow: 0 0 40px rgba(255, 140, 66, 0.3);
+            transform: scale(1.02);
+        }
+
+        .node-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .node-icon {
+            width: 44px;
+            height: 44px;
+            background: #ffffff; /* Changed to white */
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: #1a1a1a;
+            flex-shrink: 0;
+        }
+
+        .node-title {
+            font-size: 15px;
+            font-weight: 600;
+            flex: 1;
+            color: #f5f5f5;
+        }
+
+        .node-status {
+            font-size: 11px;
+            padding: 5px 14px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .node-status.processing {
+            background: rgba(255, 140, 66, 0.25);
+            color: #ffb380;
+        }
+
+        .node-description {
+            font-size: 13px;
+            color: rgba(229, 229, 229, 0.7);
+            line-height: 1.6;
+        }
+
+        .node-logs {
+            margin-top: 14px;
+            padding: 14px;
+            background: rgba(10, 10, 10, 0.6);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 140, 66, 0.1);
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 11px;
+            color: #4ade80;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .pipeline-node.active .node-logs {
+            max-height: 200px;
+        }
+
+        .log-line {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: logAppear 0.3s forwards;
+        }
+
+        @keyframes logAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .connector {
+            width: 2px;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(255, 140, 66, 0.3), rgba(255, 140, 66, 0.05));
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .connector::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #ff8c42, transparent);
+            animation: flow 1.5s infinite;
+        }
+
+        .connector.active::before {
+            animation: flow 0.8s infinite;
+        }
+
+        @keyframes flow {
+            to {
+                top: 100%;
+            }
+        }
+
+        .chat-header {
+            padding: 24px;
+            border-bottom: 1px solid rgba(255, 140, 66, 0.15);
+        }
+
+        .chat-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #f5f5f5;
+        }
+
+        .chat-subtitle {
+            font-size: 13px;
+            color: rgba(229, 229, 229, 0.5);
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .message {
+            background: rgba(30, 30, 30, 0.6);
+            padding: 16px 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 140, 66, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: messageAppear 0.4s forwards;
+        }
+
+        @keyframes messageAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            background: rgba(255, 140, 66, 0.12);
+            border-color: rgba(255, 140, 66, 0.25);
+            margin-left: 40px;
+        }
+
+        .message.assistant {
+            margin-right: 40px;
+        }
+
+        .message-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: rgba(255, 140, 66, 0.8);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .message-content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(229, 229, 229, 0.95);
+        }
+
+        .metric {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255, 140, 66, 0.15);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin-top: 10px;
+            color: #ffb380;
+            font-weight: 500;
+        }
+
+        .pulse {
+            width: 6px;
+            height: 6px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        .chat-input-container {
+            padding: 20px 24px;
+            border-top: 1px solid rgba(255, 140, 66, 0.15);
+            background: rgba(20, 20, 20, 0.6);
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 140, 66, 0.2);
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: #e5e5e5;
+            font-size: 14px;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .chat-input:focus {
+            border-color: #ff8c42;
+            box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
+        }
+
+        .chat-input::placeholder {
+            color: rgba(229, 229, 229, 0.4);
+        }
+
+        .send-button {
+            background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.3px;
+        }
+
+        .send-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 140, 66, 0.4);
+        }
+
+        .send-button:active {
+            transform: translateY(0);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 140, 66, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 140, 66, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon"><img src="resources/Gemini_Generated_Image_88d0s888d0s888d0.png" alt="DataVault Logo" style="width: 100%; height: 100%; object-fit: contain;"></div>
+            DataVault
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pipeline-section">
+            <div class="pipeline-node" data-node="0">
+                <div class="node-header">
+                    <div class="node-icon"><img src="resources/logging-glyph-icon-illustration-vector.jpg" alt="Raw Data Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <div class="node-title">Raw Data Ingestion</div>
+                    <div class="node-status">Ready</div>
+                </div>
+                <div class="node-description">
+                    Receiving raw healthcare and finance data from simulation generators.
+                </div>
+                <div class="node-logs"></div>
+            </div>
+
+            <div class="connector"></div>
+
+            <div class="pipeline-node" data-node="1">
+                <div class="node-header">
+                    <div class="node-icon"><img src="resources/Privacy logos (4).png.webp" alt="PII Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <div class="node-title">PII Anonymization & AES-256 Encryption</div>
+                    <div class="node-status">Ready</div>
+                </div>
+                <div class="node-description">
+                    Applying name and age anonymization, then encrypting data with AES-256.
+                </div>
+                <div class="node-logs"></div>
+            </div>
+
+            <div class="connector"></div>
+
+            <div class="pipeline-node" data-node="2">
+                <div class="node-header">
+                    <div class="node-icon"><img src="resources/postgresql_plain_wordmark_logo_icon_146390.png" alt="PostgreSQL Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <div class="node-title">PostgreSQL Encrypted Storage ("Zero Memory" DB)</div>
+                    <div class="node-status">Ready</div>
+                </div>
+                <div class="node-description">
+                    Storing only the encrypted, anonymized data blobs in PostgreSQL.
+                </div>
+                <div class="node-logs"></div>
+            </div>
+
+            <div class="connector"></div>
+
+            <div class="pipeline-node" data-node="3">
+                <div class="node-header">
+                    <div class="node-icon"><img src="resources/png-transparent-logo-redis-redis-icon-thumbnail.png" alt="Redis Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <div class="node-title">Redis Streams for Ingestion (Future)</div>
+                    <div class="node-status">Ready</div>
+                </div>
+                <div class="node-description">
+                    Buffering incoming data via Redis Streams for scalable, real-time processing.
+                </div>
+                <div class="node-logs"></div>
+            </div>
+
+            <div class="connector"></div>
+
+            <div class="pipeline-node" data-node="4">
+                <div class="node-header">
+                    <div class="node-icon"><img src="resources/chroma-logo_brandlogos.net_1z1qk-512x339.png" alt="ChromaDB Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <div class="node-title">Vector Database for Embeddings (Future)</div>
+                    <div class="node-status">Ready</div>
+                </div>
+                <div class="node-description">
+                    Generating vector embeddings from decrypted data for semantic search.
+                </div>
+                <div class="node-logs"></div>
+            </div>
+
+            <div class="connector"></div>
+
+            <div class="pipeline-node" data-node="5">
+                <div class="node-header">
+                    <div class="node-icon"><img src="resources/Google_Gemini_logo.svg.png" alt="Gemini RAG Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <div class="node-title">RAG & LLM Insights (Future)</div>
+                    <div class="node-status">Ready</div>
+                </div>
+                <div class="node-description">
+                    Leveraging Vector DB for context and LLM for Retrieval-Augmented Generation.
+                </div>
+                <div class="node-logs"></div>
+            </div>
+        </div>
+
+        <div class="chatbot-section">
+            <div class="chat-header">
+                <div class="chat-title">RAG Query Interface</div>
+                <div class="chat-subtitle">Ask questions about your encrypted data</div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant">
+                    <div class="message-label">System</div>
+                    <div class="message-content">
+                        DataVault pipeline initialized successfully. All nodes operational and ready for secure data processing.
+                        <div class="metric">
+                            <span class="pulse"></span>
+                            Status: Active
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="chat-input" 
+                        id="chatInput"
+                        placeholder="Ask about data trends, anomalies, or insights..."
+                    >
+                    <button class="send-button" id="sendButton">SEND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const nodes = document.querySelectorAll('.pipeline-node');
+        const connectors = document.querySelectorAll('.connector');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const sendButton = document.getElementById('sendButton');
+
+        const nodeData = [
+            { // Node 0: Raw Data Ingestion
+                logs: [
+                    '→ Receiving raw data from generators...',
+                    '→ Data prepared for PII processing.',
+                    '✓ Raw data ready for anonymization.'
+                ]
+            },
+            { // Node 1: PII Anonymization & AES-256 Encryption
+                logs: [
+                    '→ Extracting PII (names, age)...',
+                    '→ Anonymizing names using synthetic generation.',
+                    '→ Anonymizing age with statistical noise.',
+                    '→ Encrypting anonymized data with AES-256-CBC.',
+                    '✓ Anonymization & Encryption complete.'
+                ]
+            },
+            { // Node 2: PostgreSQL Encrypted Storage ("Zero Memory" DB)
+                logs: [
+                    '→ Connecting to PostgreSQL database...',
+                    '→ Inserting encrypted data blob...',
+                    '→ Record ID generated: [UUID]',
+                    '✓ Encrypted blob stored successfully.'
+                ]
+            },
+            { // Node 3: Redis Streams for Ingestion (Future)
+                logs: [
+                    '→ Initializing Redis Stream consumer...',
+                    '→ Consuming messages from data streams...',
+                    '→ Messages queued for processing.',
+                    '✓ Redis Stream ready for next stage.'
+                ]
+            },
+            { // Node 4: Vector Database for Embeddings (Future)
+                logs: [
+                    '→ Retrieving encrypted data from PostgreSQL...',
+                    '→ Decrypting anonymized data...',
+                    '→ Generating vector embeddings (e.g., using Sentence Transformers).',
+                    '✓ Embeddings stored in Vector DB.'
+                ]
+            },
+            { // Node 5: RAG & LLM Insights (Future)
+                logs: [
+                    '→ User query received: "..."',
+                    '→ Performing semantic search in Vector DB.',
+                    '→ Augmenting LLM prompt with retrieved context.',
+                    '✓ LLM generated insights.'
+                ]
+            }
+        ];
+
+        const ragResponses = [
+            "Based on the encrypted dataset, I found 247 high-risk transactions requiring review. The majority are concentrated in the Northeast region with a 34% increase from last quarter.",
+            "Analysis shows patient readmission rates have decreased by 12% after implementing the new protocol. Key factors include improved medication adherence and follow-up scheduling.",
+            "Current data indicates 3 anomalies: unusual transaction patterns in accounts #4521, #7834, and #9012. All have been flagged for compliance review.",
+            "Your encrypted data contains 1.2M patient records. The most common procedures are routine checkups (34%), lab work (28%), and specialist consultations (18%).",
+            "Financial metrics show positive trends: operating costs down 8%, revenue up 15%, and processing efficiency improved by 23% compared to last quarter.",
+            "I've identified 12 optimization opportunities in your data pipeline. Primary recommendations include batch processing refinement and cache utilization improvements."
+        ];
+
+        function addChatMessage(content, metrics, isUser = false) {
+            const message = document.createElement('div');
+            message.className = `message ${isUser ? 'user' : 'assistant'}`;
+            message.innerHTML = `
+                <div class="message-label">${isUser ? 'You' : 'DataVault AI'}</div>
+                <div class="message-content">
+                    ${content}
+                    ${metrics ? `<div class="metric"><span class="pulse"></span>${metrics}</div>` : ''}
+                </div>
+            `;
+            chatMessages.appendChild(message);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function handleUserQuery() {
+            const query = chatInput.value.trim();
+            if (!query) return;
+
+            addChatMessage(query, null, true);
+            chatInput.value = '';
+
+            setTimeout(() => {
+                const response = ragResponses[Math.floor(Math.random() * ragResponses.length)];
+                addChatMessage(response, 'Query processed in 240ms');
+            }, 800);
+        }
+
+        sendButton.addEventListener('click', handleUserQuery);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleUserQuery();
+        });
+
+        function activateNode(index) {
+            return new Promise((resolve) => {
+                const node = nodes[index];
+                const nodeInfo = nodeData[index];
+                const logsContainer = node.querySelector('.node-logs');
+                const status = node.querySelector('.node-status');
+
+                node.classList.add('active');
+                status.textContent = 'Processing';
+                status.classList.add('processing');
+
+                if (index > 0) {
+                    connectors[index - 1].classList.add('active');
+                }
+
+                let logDelay = 0;
+                nodeInfo.logs.forEach((log) => {
+                    setTimeout(() => {
+                        const logLine = document.createElement('div');
+                        logLine.className = 'log-line';
+                        logLine.textContent = log;
+                        logsContainer.appendChild(logLine);
+                    }, logDelay);
+                    logDelay += 400;
+                });
+
+                setTimeout(() => {
+                    status.textContent = 'Complete';
+                    status.classList.remove('processing');
+                    
+                    setTimeout(() => {
+                        node.classList.remove('active');
+                        if (index > 0) {
+                            connectors[index - 1].classList.remove('active');
+                        }
+                        resolve();
+                    }, 1000);
+                }, logDelay + 800);
+            });
+        }
+
+        async function runPipeline() {
+            for (let i = 0; i < nodes.length; i++) {
+                await activateNode(i);
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+
+            setTimeout(() => {
+                nodes.forEach(node => {
+                    node.querySelector('.node-logs').innerHTML = '';
+                });
+                runPipeline();
+            }, 4000);
+        }
+
+        setTimeout(() => runPipeline(), 1000);
+    </script>
+</body>
+</html>
