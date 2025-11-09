@@ -143,7 +143,7 @@ async def rag_query(query: RAGQuery):
     try:
         logging.info(f"Received RAG query: {query.query}")
         chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=8000)
-        collection = chroma_client.get_collection(name="datavault_anonymized")
+        collection = chroma_client.get_collection(name="datavault_anonymized_new")
         
         query_embedding = embedding_model.encode(query.query).tolist()
         

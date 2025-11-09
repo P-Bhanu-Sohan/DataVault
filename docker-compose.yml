@@ -27,7 +27,10 @@ services:
     ports:
       - '8001:8000'
     volumes:
-      - chroma_data:/chroma/.chroma/index
+      - ./chroma_data_new:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ALLOW_RESET=TRUE
 
   backend:
     build:
@@ -51,4 +54,4 @@ services:
 volumes:
   postgres_data:
   redis_data:
-  chroma_data:
+
