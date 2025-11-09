@@ -31,9 +31,9 @@ async def setup_test_data():
     # 1. Load test data
     print("\n--- Step 1: Loading test data ---")
     with open('simulations/datasets/healthcare.json', 'r') as f:
-        healthcare_samples = json.load(f)[:5]
+        healthcare_samples = json.load(f)
     with open('simulations/datasets/finance.json', 'r') as f:
-        finance_samples = json.load(f)[:5]
+        finance_samples = json.load(f)
     print("Loaded 5 healthcare and 5 finance records.")
 
     # 2. Ingest data via gRPC
