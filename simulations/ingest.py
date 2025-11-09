@@ -22,7 +22,7 @@ def run():
     """
     Reads data from JSON files and pushes it to a Redis Stream.
     """
-    redis_host = os.getenv("REDIS_HOST", "localhost")
+    redis_host = os.getenv("REDIS_HOST", "redis")
     stream_name = "datavault:raw_data_stream"
 
     print("--- Starting Redis Ingestion Simulation ---")

@@ -22,9 +22,9 @@ async def setup_test_data():
     print("--- Starting Test Data Setup ---")
 
     # --- Configuration ---
-    DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost:5432/datavault")
+    DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@postgres:5432/datavault")
     SECRET_KEY = os.getenv("ENCRYPTION_KEY", "12345678901234567890123456789012").encode('utf-8')
-    CHROMA_HOST = os.getenv("CHROMA_HOST", "localhost")
+    CHROMA_HOST = os.getenv("CHROMA_HOST", "chroma")
     
     # Wait for services to be ready
     print("Waiting for services to start... (10s)")

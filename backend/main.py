@@ -43,8 +43,8 @@ SECRET_KEY = os.getenv("ENCRYPTION_KEY", "12345678901234567890123456789012").enc
 if len(SECRET_KEY) != 32:
     raise ValueError("ENCRYPTION_KEY must be 32 bytes long")
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost:5432/datavault")
-REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@postgres:5432/datavault")
+REDIS_HOST = os.getenv("REDIS_HOST", "redis")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY not found in .env file or environment variables")
