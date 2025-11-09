@@ -57,7 +57,8 @@ async def setup_test_data():
     print("\n--- Step 3: Embedding data into ChromaDB ---")
     db_pool = await asyncpg.create_pool(DATABASE_URL)
     chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=8000)
-    collection = chroma_client.get_or_create_collection(name="datavault_anonymized")
+    collection_name = "datavault_anonymized_new"
+    collection = chroma_client.get_or_create_collection(name=collection_name)
     embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 
     async with db_pool.acquire() as conn:
@@ -70,6 +71,8 @@ async def setup_test_data():
                 embedding = embedding_model.encode(document).tolist()
                 collection.add(embeddings=[embedding], documents=[document], ids=[record_id])
                 print(f"Successfully embedded record {record_id} into ChromaDB.")
+    
+    print(f"Total items in '{collection_name}': {collection.count()}")
     await db_pool.close()
     print("Embedding complete.")
     print("\n--- Test Data Setup Complete ---")
