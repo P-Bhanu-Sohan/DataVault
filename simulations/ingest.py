@@ -1,34 +1,56 @@
-import grpc
+import redis
 import json
 import time
-from backend.generated import datavault_pb2, datavault_pb2_grpc
+import os
 
-def ingest_data(records, data_type):
+def ingest_data_to_stream(redis_client, records, data_type, stream_name):
     """
-    Ingests a list of records into the DataVault via gRPC.
+    Ingests a list of records into a Redis Stream.
     """
-    with grpc.insecure_channel('backend:50051') as channel:
-        stub = datavault_pb2_grpc.DataVaultServiceStub(channel)
-        for record in records:
-            response = stub.Ingest(datavault_pb2.DataRecord(data_type=data_type, data=json.dumps(record).encode()))
-            print(f"{data_type.capitalize()} record ingested with ID: {response.id}, Status: {response.status}")
+    print(f"--- Ingesting {data_type} data into stream '{stream_name}' ---")
+    for record in records:
+        # The message for XADD must be a dictionary of bytes or strings
+        message = {
+            "data_type": data_type,
+            "data": json.dumps(record)
+        }
+        record_id = redis_client.xadd(stream_name, message)
+        print(f"  - Ingested {data_type} record with Stream ID: {record_id}")
+    print(f"--- Finished ingesting {data_type} data ---\n")
 
 def run():
     """
-    Reads data from JSON files and ingests it into the DataVault via gRPC.
+    Reads data from JSON files and pushes it to a Redis Stream.
     """
-    # Wait for the gRPC server to be ready
-    time.sleep(15)
+    redis_host = os.getenv("REDIS_HOST", "localhost")
+    stream_name = "datavault:raw_data_stream"
+
+    print("--- Starting Redis Ingestion Simulation ---")
+    print(f"Connecting to Redis at {redis_host}...")
+    
+    # Wait for Redis to be ready
+    time.sleep(5)
+    
+    try:
+        # decode_responses=True decodes responses from bytes to UTF-8
+        r = redis.Redis(host=redis_host, port=6379, decode_responses=True)
+        r.ping()
+        print("Successfully connected to Redis.")
+    except redis.exceptions.ConnectionError as e:
+        print(f"Error connecting to Redis: {e}")
+        return
 
     # Ingest healthcare data
     with open('/app/simulations/datasets/healthcare.json', 'r') as f:
-        healthcare_data = json.load(f)
-        ingest_data(healthcare_data, 'healthcare')
+        healthcare_data = json.load(f)[:5]
+        ingest_data_to_stream(r, healthcare_data, 'healthcare', stream_name)
 
     # Ingest finance data
     with open('/app/simulations/datasets/finance.json', 'r') as f:
-        finance_data = json.load(f)
-        ingest_data(finance_data, 'finance')
+        finance_data = json.load(f)[:5]
+        ingest_data_to_stream(r, finance_data, 'finance', stream_name)
+    
+    print("--- Ingestion Simulation Complete ---")
 
 if __name__ == '__main__':
     run()

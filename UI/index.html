@@ -392,6 +392,7 @@
 
     <div class="container">
         <div class="pipeline-section">
+            <!-- Node 0: Raw Data Ingestion -->
             <div class="pipeline-node" data-node="0">
                 <div class="node-header">
                     <div class="node-icon"><img src="resources/logging-glyph-icon-illustration-vector.jpg" alt="Raw Data Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
@@ -406,7 +407,23 @@
 
             <div class="connector"></div>
 
+            <!-- Node 1: Redis Streams -->
             <div class="pipeline-node" data-node="1">
+                <div class="node-header">
+                    <div class="node-icon"><img src="resources/png-transparent-logo-redis-redis-icon-thumbnail.png" alt="Redis Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <div class="node-title">Redis Streams Ingestion</div>
+                    <div class="node-status">Ready</div>
+                </div>
+                <div class="node-description">
+                    Buffering incoming data via Redis Streams for scalable, real-time processing.
+                </div>
+                <div class="node-logs"></div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- Node 2: PII Anonymization & Encryption -->
+            <div class="pipeline-node" data-node="2">
                 <div class="node-header">
                     <div class="node-icon"><img src="resources/Privacy logos (4).png.webp" alt="PII Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
                     <div class="node-title">PII Anonymization & AES-256 Encryption</div>
@@ -420,7 +437,8 @@
 
             <div class="connector"></div>
 
-            <div class="pipeline-node" data-node="2">
+            <!-- Node 3: PostgreSQL Storage -->
+            <div class="pipeline-node" data-node="3">
                 <div class="node-header">
                     <div class="node-icon"><img src="resources/postgresql_plain_wordmark_logo_icon_146390.png" alt="PostgreSQL Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
                     <div class="node-title">PostgreSQL Encrypted Storage ("Zero Memory" DB)</div>
@@ -434,24 +452,11 @@
 
             <div class="connector"></div>
 
-            <div class="pipeline-node" data-node="3">
-                <div class="node-header">
-                    <div class="node-icon"><img src="resources/png-transparent-logo-redis-redis-icon-thumbnail.png" alt="Redis Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
-                    <div class="node-title">Redis Streams for Ingestion (Future)</div>
-                    <div class="node-status">Ready</div>
-                </div>
-                <div class="node-description">
-                    Buffering incoming data via Redis Streams for scalable, real-time processing.
-                </div>
-                <div class="node-logs"></div>
-            </div>
-
-            <div class="connector"></div>
-
+            <!-- Node 4: Vector Database -->
             <div class="pipeline-node" data-node="4">
                 <div class="node-header">
                     <div class="node-icon"><img src="resources/chroma-logo_brandlogos.net_1z1qk-512x339.png" alt="ChromaDB Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
-                    <div class="node-title">Vector Database for Embeddings (Future)</div>
+                    <div class="node-title">Vector Database for Embeddings</div>
                     <div class="node-status">Ready</div>
                 </div>
                 <div class="node-description">
@@ -462,10 +467,11 @@
 
             <div class="connector"></div>
 
+            <!-- Node 5: RAG & LLM Insights -->
             <div class="pipeline-node" data-node="5">
                 <div class="node-header">
                     <div class="node-icon"><img src="resources/Google_Gemini_logo.svg.png" alt="Gemini RAG Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
-                    <div class="node-title">RAG & LLM Insights (Future)</div>
+                    <div class="node-title">RAG & LLM Insights</div>
                     <div class="node-status">Ready</div>
                 </div>
                 <div class="node-description">
@@ -517,20 +523,27 @@
             { // Node 0: Raw Data Ingestion
                 logs: [
                     '→ Receiving raw data from generators...',
-                    '→ Data prepared for PII processing.',
-                    '✓ Raw data ready for anonymization.'
+                    '→ Data prepared for stream ingestion.',
+                    '✓ Raw data ready for Redis.'
                 ]
             },
-            { // Node 1: PII Anonymization & AES-256 Encryption
+            { // Node 1: Redis Streams
                 logs: [
-                    '→ Extracting PII (names, age)...',
-                    '→ Anonymizing names using synthetic generation.',
-                    '→ Anonymizing age with statistical noise.',
+                    '→ Initializing Redis Stream producer...',
+                    '→ Pushing messages to datavault:raw_data_stream.',
+                    '→ Messages queued for consumption.',
+                    '✓ Redis Stream ingestion complete.'
+                ]
+            },
+            { // Node 2: PII Anonymization & AES-256 Encryption
+                logs: [
+                    '→ Consuming from Redis Stream.',
+                    '→ Anonymizing names and age.',
                     '→ Encrypting anonymized data with AES-256-CBC.',
                     '✓ Anonymization & Encryption complete.'
                 ]
             },
-            { // Node 2: PostgreSQL Encrypted Storage ("Zero Memory" DB)
+            { // Node 3: PostgreSQL Encrypted Storage
                 logs: [
                     '→ Connecting to PostgreSQL database...',
                     '→ Inserting encrypted data blob...',
@@ -538,23 +551,15 @@
                     '✓ Encrypted blob stored successfully.'
                 ]
             },
-            { // Node 3: Redis Streams for Ingestion (Future)
-                logs: [
-                    '→ Initializing Redis Stream consumer...',
-                    '→ Consuming messages from data streams...',
-                    '→ Messages queued for processing.',
-                    '✓ Redis Stream ready for next stage.'
-                ]
-            },
-            { // Node 4: Vector Database for Embeddings (Future)
+            { // Node 4: Vector Database for Embeddings
                 logs: [
                     '→ Retrieving encrypted data from PostgreSQL...',
                     '→ Decrypting anonymized data...',
-                    '→ Generating vector embeddings (e.g., using Sentence Transformers).',
+                    '→ Generating vector embeddings.',
                     '✓ Embeddings stored in Vector DB.'
                 ]
             },
-            { // Node 5: RAG & LLM Insights (Future)
+            { // Node 5: RAG & LLM Insights
                 logs: [
                     '→ User query received: "..."',
                     '→ Performing semantic search in Vector DB.',
@@ -562,15 +567,6 @@
                     '✓ LLM generated insights.'
                 ]
             }
-        ];
-
-        const ragResponses = [
-            "Based on the encrypted dataset, I found 247 high-risk transactions requiring review. The majority are concentrated in the Northeast region with a 34% increase from last quarter.",
-            "Analysis shows patient readmission rates have decreased by 12% after implementing the new protocol. Key factors include improved medication adherence and follow-up scheduling.",
-            "Current data indicates 3 anomalies: unusual transaction patterns in accounts #4521, #7834, and #9012. All have been flagged for compliance review.",
-            "Your encrypted data contains 1.2M patient records. The most common procedures are routine checkups (34%), lab work (28%), and specialist consultations (18%).",
-            "Financial metrics show positive trends: operating costs down 8%, revenue up 15%, and processing efficiency improved by 23% compared to last quarter.",
-            "I've identified 12 optimization opportunities in your data pipeline. Primary recommendations include batch processing refinement and cache utilization improvements."
         ];
 
         function addChatMessage(content, metrics, isUser = false) {
@@ -585,7 +581,7 @@
             `;
             chatMessages.appendChild(message);
             chatMessages.scrollTop = chatMessages.scrollHeight;
-            return message; // Return the created message element
+            return message;
         }
 
         function handleUserQuery() {
@@ -598,30 +594,23 @@
             sendButton.disabled = true;
             sendButton.textContent = '...';
 
-            // Add a temporary "thinking" message
             const thinkingMessage = addChatMessage('Thinking...', null, false);
 
             fetch('/rag_query', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ query: query }),
             })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+                if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
                 return response.json();
             })
             .then(data => {
-                // Remove the "thinking" message
                 thinkingMessage.remove();
                 addChatMessage(data.response, 'Query processed', false);
             })
             .catch(error => {
                 console.error('Error:', error);
-                // Remove the "thinking" message
                 thinkingMessage.remove();
                 addChatMessage('Sorry, something went wrong. Please try again.', null, false);
             })
